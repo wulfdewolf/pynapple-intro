@@ -37,7 +37,7 @@ jobs:
         run: |
           export PATH="$HOME/.cargo/bin:$PATH"
           uv venv
-          uv pip sync uv.lock
+          uv sync
 
       # Make Quarto see the venv
       - name: Activate venv for Quarto
