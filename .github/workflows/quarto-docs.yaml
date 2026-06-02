@@ -22,23 +22,36 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set up Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
-
+      # ---------------------------
+      # Python + uv setup
+      # ---------------------------
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.13'
+          python-version: "3.13"
 
       - name: Install uv
         run: curl -LsSf https://astral.sh/uv/install.sh | sh
-    
-      - name: Sync environment from lockfile
+
+      - name: Create venv + sync deps
         run: |
           export PATH="$HOME/.cargo/bin:$PATH"
           uv venv
           uv pip sync uv.lock
 
+      # Make Quarto see the venv
+      - name: Activate venv for Quarto
+        run: echo "$PWD/.venv/bin" >> $GITHUB_PATH
+
+      # ---------------------------
+      # Quarto setup
+      # ---------------------------
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      # ---------------------------
+      # Publish
+      # ---------------------------
       - name: Publish to gh-pages
         uses: quarto-dev/quarto-actions/publish@v2
         with:
@@ -46,4 +59,3 @@ jobs:
           path: book
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
