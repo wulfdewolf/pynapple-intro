@@ -5,7 +5,7 @@ page-layout: full
 ## <img src="logo.png" style="height:70px;"> An introduction to Pynapple
 
 
-This is blablabla
+TBA
 
 ---
 ![](https://pynapple.org/_images/CCN-logo-wText.png){width=40%}
