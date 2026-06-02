@@ -1,0 +1,15 @@
+---
+title: "Introduction to Pynapple"
+format: revealjs
+---
+
+## What is Pynapple?
+
+## Pynapple fundamentals
+
+## Traditional neuroscientific analysis using Pynapple 
+
+## Advanced Pynapple  
+
+## Now it's your turn
+
