@@ -1,33 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "",
-    "section": "",
-    "text": "This is blablabla"
-  },
-  {
-    "objectID": "index.html#an-introduction-to-pynapple",
-    "href": "index.html#an-introduction-to-pynapple",
-    "title": "",
-    "section": "",
-    "text": "This is blablabla"
-  },
-  {
-    "objectID": "book/index.html",
-    "href": "book/index.html",
-    "title": "Preface",
-    "section": "",
-    "text": "Welcome to the electrophysiology course (TODO: name).\nTODO: think of a cool course name\nThis course will cover the full electrophysiology processing pipeline, from start to finish. This includes\n\ndata preprocessing\nspike sorting,\npostproicessng and quality assessment\nintegration with behavioural data.\n\nGive overview and link to pages Explain the Concept Notes (internal links where concepts are expanded, indicated with the 💡 emoji) link to github: https://github.com/neuroinformatics-unit/course-ephys-osss\n\n\n\nWellcome Trust, Gatsby\nFunders for those who contributed materials?\nNiko"
-  },
-  {
-    "objectID": "book/index.html#funding-and-ackowledgements",
-    "href": "book/index.html#funding-and-ackowledgements",
-    "title": "Preface",
-    "section": "",
-    "text": "Wellcome Trust, Gatsby\nFunders for those who contributed materials?\nNiko"
-  },
-  {
     "objectID": "book/pynapple_fundamentals.html#slide-1",
     "href": "book/pynapple_fundamentals.html#slide-1",
     "title": "My Slides",
@@ -40,6 +12,20 @@
     "title": "My Slides",
     "section": "Slide 2",
     "text": "Slide 2\nSome content here"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "",
+    "section": "",
+    "text": "TBA"
+  },
+  {
+    "objectID": "index.html#an-introduction-to-pynapple",
+    "href": "index.html#an-introduction-to-pynapple",
+    "title": "",
+    "section": "",
+    "text": "TBA"
   },
   {
     "objectID": "slides/intro.html#what-is-pynapple",
@@ -75,5 +61,19 @@
     "title": "Introduction to Pynapple",
     "section": "Now it’s your turn",
     "text": "Now it’s your turn"
+  },
+  {
+    "objectID": "book/index.html",
+    "href": "book/index.html",
+    "title": "Preface",
+    "section": "",
+    "text": "Welcome to the electrophysiology course (TODO: name).\nTODO: think of a cool course name\nThis course will cover the full electrophysiology processing pipeline, from start to finish. This includes\n\ndata preprocessing\nspike sorting,\npostproicessng and quality assessment\nintegration with behavioural data.\n\nGive overview and link to pages Explain the Concept Notes (internal links where concepts are expanded, indicated with the 💡 emoji) link to github: https://github.com/neuroinformatics-unit/course-ephys-osss\n\n\n\nWellcome Trust, Gatsby\nFunders for those who contributed materials?\nNiko"
+  },
+  {
+    "objectID": "book/index.html#funding-and-ackowledgements",
+    "href": "book/index.html#funding-and-ackowledgements",
+    "title": "Preface",
+    "section": "",
+    "text": "Wellcome Trust, Gatsby\nFunders for those who contributed materials?\nNiko"
   }
 ]
