@@ -1,0 +1,41 @@
+project:
+  type: website
+
+website:
+  navbar:
+    left:
+      - text: Home
+        href: index.qmd
+      - text: Notebook
+        href: book/index.html
+      - text: Slides
+        href: slides/intro.html
+
+execute:
+  freeze: auto
+
+book:
+  title: "An introduction to Pynapple"
+  author:
+    - name: Wolf De Wulf
+      url: https://wulfdewolf.github.io
+      email: wolf.de.wulf@ed.ac.uk
+      orcid: 0000-0002-0219-3120
+      corresponding: true
+      affiliations:
+        - id: UoE
+          name: University of Edinburgh
+          department: Institute for Neuroscience and Cardiovascular Research
+          group: Nolan lab
+          city: Edinburgh
+          country: United Kingdom
+  date: "02/06/2026"
+  chapters:
+    - index.qmd
+    - pynapple_fundamentals.qmd
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand

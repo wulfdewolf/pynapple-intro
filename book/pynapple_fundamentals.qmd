@@ -1,15 +1,15 @@
 ---
-title: "Introduction to Pynapple"
-format: revealjs
+title: "My Slides"
+format:
+  revealjs:
+    slide-number: true
+    theme: simple
 ---
 
-## What is Pynapple?
+## Slide 1
 
-## Pynapple fundamentals
+Hello world
 
-## Traditional neuroscientific analysis using Pynapple 
+## Slide 2
 
-## Advanced Pynapple  
-
-## Now it's your turn
-
+Some content here
