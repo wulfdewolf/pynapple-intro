@@ -1,15 +1,6 @@
 project:
-  type: website
-
-website:
-  navbar:
-    left:
-      - text: Home
-        href: index.qmd
-      - text: Notebook
-        href: book/index.html
-      - text: Slides
-        href: slides/intro.html
+  type: book
+  output-dir: _site
 
 execute:
   freeze: auto
