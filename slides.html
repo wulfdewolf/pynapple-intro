@@ -30,6 +30,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="slides_files/libs/revealjs/dist/theme/quarto-2740581606dc327e82f18f789b69d8a0.css">
   <link href="slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -146,34 +212,60 @@
 </section>
 <section id="history" class="slide level2">
 <h2>History</h2>
-<p><strong>~2000 TSToolbox, MATLAB</strong><br>
+<strong>2000 TSToolbox, MATLAB</strong><br>
 McNaughton lab: David Redish &amp; Francesco Battaglia<br>
-<strong>~2016 TSToolbox2, MATLAB</strong><br>
+
+<div style="height: 0.8cm;">
+
+</div>
+<strong>2016 TSToolbox2, MATLAB</strong><br>
 Adrien Peyrache &amp; Luke Sjulson<br>
-<strong>~2018 neuroseries, Python</strong><br>
+
+<div style="height: 0.8cm;">
+
+</div>
+<strong>2018 neuroseries, Python</strong><br>
 Francesco Battaglia<br>
-<strong>~2021 pynapple, Python</strong><br>
+
+<div style="height: 0.8cm;">
+
+</div>
+<p><strong>2021 pynapple, Python</strong><br>
 Guillaume Viejo</p>
 </section>
 <section id="python-neural-analysis-package" class="slide level2">
 <h2>Python Neural Analysis Package</h2>
-<p>Presently with the Flatiron Institute’s neuroRSE team:</p>
+<p>presently with the Flatiron Institute’s neuroRSE team:</p>
+<div class="columns" data-valign="middle">
+<div class="column" style="text-align:left;">
 <ul>
 <li><strong>Guillaume Viejo</strong></li>
 <li><strong>Sarah Jo Venditto</strong></li>
 <li>Edoardo Balzani</li>
 <li>William Broderick</li>
 </ul>
-<p>and <strong>me</strong>, a 2025 neuroRSE intern</p>
+<p>+ <strong>me</strong>, a 2025 neuroRSE intern</p>
+</div><div class="column" style="text-align:right;">
+<p><img data-src="https://githubcard.com/pynapple-org/pynapple.svg?d=M3uYZ4nV"></p>
+</div></div>
 <div class="columns" data-valign="middle">
-<div class="column" style="text-align:center;">
+<div class="column" style="text-align:left;">
 <p><img data-src="https://pynapple.org/_images/CCN-logo-wText.png" style="height:180px; width:auto; object-fit:contain;"></p>
-</div><div class="column" style="text-align:center;">
+</div><div class="column" style="text-align:right;">
 <p><img data-src="https://uc7f483922227862222262919046.previews.dropboxusercontent.com/p/thumb/ADCQmT3crbxNKsumOBw-hBoAvujpIjSiTW7Xk_8khIdTkbqxafLBTEiITOAjf63cG1PmGKyBribYWd0LztWZaNpLfAjOmzb0LAdesx_DuGcZmrww48hke1imMSOjszHAvyXfuh-5E2emz77z5G8VnSZzk-UOrho_8AWqc5EzCG2wlzL8rQ68oVSh0tbUgA_Q8JkWiGgt0Azq9-Ukq65felOEzurObQULL6wlsc5aZfgLSDMgCyinJGNx2Zgmb4dpoxrXJuPZQdE6_46lwhpvYMKzXUO59kksGz5o6va2cl4K38jqb0lllEnQeg7c4PZL2nJGanYWzBoj5QRkI_3DDldAetz-VLkkXz5o2SmQ9tMwkA/p.png" style="height:180px; width:70%; object-fit:contain;"></p>
 </div></div>
 </section>
 <section id="pynapple-fundamentals" class="slide level2">
 <h2>Pynapple fundamentals</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="im">import</span> pynapple <span class="im">as</span> nap</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Time series</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-startfrom="2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python" style="counter-reset: source-line 1;"><span id="cb2-2"><a href=""></a>ts <span class="op">=</span> nap.Ts(t<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Time series with data</li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-startfrom="3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python" style="counter-reset: source-line 2;"><span id="cb3-3"><a href=""></a>ts <span class="op">=</span> nap.Ts(t<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>], d<span class="op">=</span>[<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 </section>
     </div>

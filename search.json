@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "An introduction to Pynapple",
     "section": "",
-    "text": "Preface\nWelcome to this introduction to Pynapple.",
+    "text": "Preface\nWelcome to this introduction to Pynapple.\nPynapple is a python package for analysing neural data.\nThe package is actively maintained by the Flatiron Institute’s neuroRSE team.\nThe only thing you’ll need to follow along is a working Python environment with pynapple installed:\nuv init\nuv add pynapple",
     "crumbs": [
       "Preface"
     ]
