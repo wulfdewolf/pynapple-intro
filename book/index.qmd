@@ -3,7 +3,15 @@ toc: False
 ---
 # Preface {.unnumbered}
 
-Welcome to this introduction to Pynapple.
+Welcome to this introduction to [Pynapple](pynapple.org).  
+Pynapple is a python package for analysing neural data.  
+The package is actively maintained by the Flatiron Institute's [neuroRSE team](https://neurorse.flatironinstitute.org/). 
+
+The only thing you'll need to follow along is a working Python environment with `pynapple` installed:
+```python
+uv init
+uv add pynapple
+```
 
 <style>
 .slide-deck {

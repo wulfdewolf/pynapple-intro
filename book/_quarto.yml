@@ -23,6 +23,12 @@ book:
           group: Nolan lab
           city: Edinburgh
           country: United Kingdom
+        - id: Flatiron
+          name: Flatiron Institute
+          department: Center for Computational Neuroscience
+          group: NeuroRSE
+          city: New York
+          country: United States
   sidebar:
     align: left
     style: floating
@@ -52,5 +58,4 @@ book:
 format:
   html:
     theme:
-      - cosmo
-      - brand
+      - flatly

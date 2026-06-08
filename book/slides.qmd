@@ -11,36 +11,57 @@ format: revealjs
 
 ## History
 
-__~2000  TSToolbox, MATLAB__  
+__2000  TSToolbox, MATLAB__  
 McNaughton lab: David Redish & Francesco Battaglia  
-__~2016  TSToolbox2, MATLAB__  
+<div style="height: 0.8cm;"></div>
+__2016  TSToolbox2, MATLAB__  
 Adrien Peyrache & Luke Sjulson  
-__~2018  neuroseries,  Python__  
+<div style="height: 0.8cm;"></div>
+__2018  neuroseries,  Python__  
 Francesco Battaglia  
-__~2021  pynapple, Python__  
+<div style="height: 0.8cm;"></div>
+__2021  pynapple, Python__  
 Guillaume Viejo  
 
 ## Python Neural Analysis Package
 
-Presently with the Flatiron Institute's neuroRSE team:
+presently with the Flatiron Institute's neuroRSE team:
 
+::: {.columns valign="middle"}
+::: {.column style="text-align:left;"}
 - __Guillaume Viejo__
 - __Sarah Jo Venditto__
 - Edoardo Balzani
 - William Broderick
 
-and __me__, a 2025 neuroRSE intern
+\+ __me__, a 2025 neuroRSE intern
+:::
+::: {.column style="text-align:right;"}
+![](https://githubcard.com/pynapple-org/pynapple.svg?d=M3uYZ4nV)
+:::
+:::
 
 ::: {.columns valign="middle"}
-
-::: {.column style="text-align:center;"}
+::: {.column style="text-align:left;"}
 ![](https://pynapple.org/_images/CCN-logo-wText.png){style="height:180px; width:auto; object-fit:contain;"}
 :::
-
-::: {.column style="text-align:center;"}
+::: {.column style="text-align:right;"}
 ![](https://uc7f483922227862222262919046.previews.dropboxusercontent.com/p/thumb/ADCQmT3crbxNKsumOBw-hBoAvujpIjSiTW7Xk_8khIdTkbqxafLBTEiITOAjf63cG1PmGKyBribYWd0LztWZaNpLfAjOmzb0LAdesx_DuGcZmrww48hke1imMSOjszHAvyXfuh-5E2emz77z5G8VnSZzk-UOrho_8AWqc5EzCG2wlzL8rQ68oVSh0tbUgA_Q8JkWiGgt0Azq9-Ukq65felOEzurObQULL6wlsc5aZfgLSDMgCyinJGNx2Zgmb4dpoxrXJuPZQdE6_46lwhpvYMKzXUO59kksGz5o6va2cl4K38jqb0lllEnQeg7c4PZL2nJGanYWzBoj5QRkI_3DDldAetz-VLkkXz5o2SmQ9tMwkA/p.png){style="height:180px; width:70%; object-fit:contain;"}
 :::
-
 :::
 
+
 ## Pynapple fundamentals
+```python
+import pynapple as nap
+```
+
+- Time series
+```python {.number-lines startFrom=2}
+ts = nap.Ts(t=[1,2,3,4,5])
+```
+
+- Time series with data
+```python {.number-lines startFrom=3}
+ts = nap.Ts(t=[1,2,3,4,5], d=[0, 0, 0, 1, 1])
+```
