@@ -4,17 +4,7 @@
     "href": "index.html",
     "title": "An introduction to Pynapple",
     "section": "",
-    "text": "Preface\nWelcome to the electrophysiology course (TODO: name).\nTODO: think of a cool course name\nThis course will cover the full electrophysiology processing pipeline, from start to finish. This includes\nGive overview and link to pages Explain the Concept Notes (internal links where concepts are expanded, indicated with the 💡 emoji) link to github: https://github.com/neuroinformatics-unit/course-ephys-osss",
-    "crumbs": [
-      "Preface"
-    ]
-  },
-  {
-    "objectID": "index.html#funding-and-ackowledgements",
-    "href": "index.html#funding-and-ackowledgements",
-    "title": "An introduction to Pynapple",
-    "section": "Funding and Ackowledgements",
-    "text": "Funding and Ackowledgements\n\nWellcome Trust, Gatsby\nFunders for those who contributed materials?\nNiko",
+    "text": "Preface\nWelcome to this introduction to Pynapple.",
     "crumbs": [
       "Preface"
     ]
