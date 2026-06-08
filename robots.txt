@@ -1,1 +1,0 @@
-Sitemap: https://wulfdewolf.github.io/pynapple-intro/sitemap.xml
