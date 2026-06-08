@@ -1,25 +1,23 @@
+---
+toc: False
+---
 # Preface {.unnumbered}
 
-Welcome to the electrophysiology course (TODO: name).
+Welcome to this introduction to Pynapple.
 
-TODO: [think of a cool course name](https://github.com/neuroinformatics-unit/course-ephys-osss/issues/2)
+<style>
+.slide-deck {
+    border: 3px solid #dee2e6;
+    width: 100%;
+    height: 475px;
+}
+</style>
 
-This course will cover the full electrophysiology processing pipeline,
-from start to finish. This includes 
+<div>
+```{=html}
+<iframe class="slide-deck" src="slides.html"></iframe>
+```
+</div>
 
-- data preprocessing
-- spike sorting,
-- postproicessng and quality assessment
-- integration with behavioural data.
-
-Give overview and link to pages
-Explain the Concept Notes (internal links where concepts are expanded, indicated with the 💡 emoji) 
-link to github: https://github.com/neuroinformatics-unit/course-ephys-osss
-
-## Funding and Ackowledgements
-
-
-- Wellcome Trust, Gatsby
-- Funders for those who contributed materials?
-- Niko 
-
+---
+[![](https://pynapple.org/_images/CCN-logo-wText.png){width=50%}](https://www.simonsfoundation.org/flatiron/)

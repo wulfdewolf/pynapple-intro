@@ -1,15 +1,46 @@
 ---
-title: "Habits"
-author: "John Doe"
 format: revealjs
 ---
 
-## Getting up
+## 
+::: {layout="[[-1], [1], [-1]]"}
 
-- Turn off alarm
-- Get out of bed
+![](https://pynapple.org/_static/Pynapple_final_logo.png)
 
-## Going to sleep
+:::
 
-- Get in bed
-- Count sheep
+## History
+
+__~2000  TSToolbox, MATLAB__  
+McNaughton lab: David Redish & Francesco Battaglia  
+__~2016  TSToolbox2, MATLAB__  
+Adrien Peyrache & Luke Sjulson  
+__~2018  neuroseries,  Python__  
+Francesco Battaglia  
+__~2021  pynapple, Python__  
+Guillaume Viejo  
+
+## Python Neural Analysis Package
+
+Presently with the Flatiron Institute's neuroRSE team:
+
+- __Guillaume Viejo__
+- __Sarah Jo Venditto__
+- Edoardo Balzani
+- William Broderick
+
+and __me__, a 2025 neuroRSE intern
+
+::: {.columns valign="middle"}
+
+::: {.column style="text-align:center;"}
+![](https://pynapple.org/_images/CCN-logo-wText.png){style="height:180px; width:auto; object-fit:contain;"}
+:::
+
+::: {.column style="text-align:center;"}
+![](https://uc7f483922227862222262919046.previews.dropboxusercontent.com/p/thumb/ADCQmT3crbxNKsumOBw-hBoAvujpIjSiTW7Xk_8khIdTkbqxafLBTEiITOAjf63cG1PmGKyBribYWd0LztWZaNpLfAjOmzb0LAdesx_DuGcZmrww48hke1imMSOjszHAvyXfuh-5E2emz77z5G8VnSZzk-UOrho_8AWqc5EzCG2wlzL8rQ68oVSh0tbUgA_Q8JkWiGgt0Azq9-Ukq65felOEzurObQULL6wlsc5aZfgLSDMgCyinJGNx2Zgmb4dpoxrXJuPZQdE6_46lwhpvYMKzXUO59kksGz5o6va2cl4K38jqb0lllEnQeg7c4PZL2nJGanYWzBoj5QRkI_3DDldAetz-VLkkXz5o2SmQ9tMwkA/p.png){style="height:180px; width:70%; object-fit:contain;"}
+:::
+
+:::
+
+## Pynapple fundamentals

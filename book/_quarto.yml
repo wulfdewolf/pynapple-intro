@@ -23,10 +23,31 @@ book:
           group: Nolan lab
           city: Edinburgh
           country: United Kingdom
+  sidebar:
+    align: left
+    style: floating
+    collapse-level: 2
+    pinned: false
+    tools:
+      - icon: link
+        url: "https://pynapple.org"
+        text: Pynapple website
+  repo-url: "https://github.com/pynapple-org/pynapple"
+  site-url: "https://pynapple.org"
+  open-graph: true
   date: "02/06/2026"
   chapters:
     - index.qmd
-    - _slides.qmd
+    - part: History
+      chapters:
+        - 01-origins.qmd
+        - 02-maintainers.qmd
+    - part: Pynapple fundamentals
+      chapters:
+        - 03-time-series.qmd
+    - part: Practise
+      chapters:
+        - project-ideas.qmd
 
 format:
   html:
