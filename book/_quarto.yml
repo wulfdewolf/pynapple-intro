@@ -1,8 +1,9 @@
 project:
   type: book
   output-dir: _site
-  render:
-    - "**/*.qmd"
+  resources:
+    - slides.html
+    - slides_files
 
 execute:
   freeze: auto
