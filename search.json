@@ -4,9 +4,53 @@
     "href": "index.html",
     "title": "An introduction to Pynapple",
     "section": "",
-    "text": "Preface\nWelcome to this introduction to Pynapple.\nPynapple is a python package for analysing neural data.\nThe package is actively maintained by the Flatiron Institute’s neuroRSE team.\nThe only thing you’ll need to follow along is a working Python environment with pynapple installed:\nuv init\nuv add pynapple",
+    "text": "Preface\nWelcome to this introduction to Pynapple.\nPynapple is a python package for analysing neural data.\nThe package is actively maintained by the Flatiron Institute’s neuroRSE team.\nThe only thing you’ll need to follow along is a working Python environment with pynapple installed:\npip install pynapple\nNow just open your favourite way of running Python, and follow along!",
     "crumbs": [
       "Preface"
+    ]
+  },
+  {
+    "objectID": "snippets/ts.html",
+    "href": "snippets/ts.html",
+    "title": "3  Time series (Ts)",
+    "section": "",
+    "text": "import pynapple as nap\nts = nap.Ts(t=[1,2,3,4,5])\nts\n\nTime (s)\n1.0\n2.0\n3.0\n4.0\n5.0\nshape: 5",
+    "crumbs": [
+      "Pynapple fundamentals",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Time series (`Ts`)</span>"
+    ]
+  },
+  {
+    "objectID": "snippets/tsgroup.html",
+    "href": "snippets/tsgroup.html",
+    "title": "4  Multiple time series (TsGroup)",
+    "section": "",
+    "text": "import pynapple as nap\ntsgroup = nap.TsGroup({\n    1: nap.Ts([1,2,3,4,5]), \n    2: nap.Ts([1.5, 2.2, 2.9, 4.2])\n})\ntsgroup\n\n  Index    rate\n-------  ------\n      1    1.25\n      2    1",
+    "crumbs": [
+      "Pynapple fundamentals",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Multiple time series (`TsGroup`)</span>"
+    ]
+  },
+  {
+    "objectID": "snippets/tsd.html",
+    "href": "snippets/tsd.html",
+    "title": "5  Time series with data (Tsd)",
+    "section": "",
+    "text": "import pynapple as nap\ntsd = nap.Tsd(t=[1,2,3,4,5], d=[1,1,1,2,1])\ntsd\n\nTime (s)\n----------  --\n1            1\n2            1\n3            1\n4            2\n5            1\ndtype: int64, shape: (5,)",
+    "crumbs": [
+      "Pynapple fundamentals",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Time series with data (`Tsd`)</span>"
+    ]
+  },
+  {
+    "objectID": "snippets/tsdframe.html",
+    "href": "snippets/tsdframe.html",
+    "title": "6  Time series with multiple data columns (TsdFrame)",
+    "section": "",
+    "text": "import pynapple as nap\ntsdframe = nap.TsdFrame(\n    t=[1,2,3,4,5], \n    d=[[1,2],\n       [1,2],\n       [1,3],\n       [2,1],\n       [1,2]],\n    columns=[\"A\", \"B\"]\n)\ntsdframe\n\nTime (s)      A    B\n----------  ---  ---\n1             1    2\n2             1    2\n3             1    3\n4             2    1\n5             1    2\ndtype: int64, shape: (5, 2)",
+    "crumbs": [
+      "Pynapple fundamentals",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Time series with multiple data columns (`TsdFrame`)</span>"
     ]
   }
 ]

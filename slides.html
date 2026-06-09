@@ -250,19 +250,145 @@ Guillaume Viejo</p>
 </div></div>
 <p><img data-src="https://pynapple.org/_images/CCN-logo-wText.png" style="width:40.0%"></p>
 </section>
-<section id="pynapple-fundamentals" class="slide level2">
-<h2>Pynapple fundamentals</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="im">import</span> pynapple <span class="im">as</span> nap</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li>Time series</li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-startfrom="2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python" style="counter-reset: source-line 1;"><span id="cb2-2"><a href=""></a>ts <span class="op">=</span> nap.Ts(t<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ul>
-<li>Time series with data</li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-startfrom="3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python" style="counter-reset: source-line 2;"><span id="cb3-3"><a href=""></a>ts <span class="op">=</span> nap.Ts(t<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>], d<span class="op">=</span>[<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section>
+<section id="pynapple-fundamentals" class="title-slide slide level1 center">
+<h1>Pynapple fundamentals</h1>
 
 </section>
+<section id="time-series-ts" class="slide level2">
+<h2>Time series (<code>Ts</code>)</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div id="8638fac4" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="im">import</span> pynapple <span class="im">as</span> nap</span>
+<span id="cb1-2"><a href=""></a>ts <span class="op">=</span> nap.Ts(t<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>])</span>
+<span id="cb1-3"><a href=""></a>ts</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<pre><code>Time (s)
+1.0
+2.0
+3.0
+4.0
+5.0
+shape: 5</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:60%;">
+<div id="a53ca7e0" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides_files/figure-revealjs/cell-4-output-1.png" width="491" height="299"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="multiple-time-series-tsgroup" class="slide level2">
+<h2>Multiple time series (<code>TsGroup</code>)</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div id="f382f5ff" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href=""></a><span class="im">import</span> pynapple <span class="im">as</span> nap</span>
+<span id="cb3-2"><a href=""></a>tsgroup <span class="op">=</span> nap.TsGroup({</span>
+<span id="cb3-3"><a href=""></a>    <span class="dv">1</span>: nap.Ts([<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]), </span>
+<span id="cb3-4"><a href=""></a>    <span class="dv">2</span>: nap.Ts([<span class="fl">1.5</span>, <span class="fl">2.2</span>, <span class="fl">2.9</span>, <span class="fl">4.2</span>])</span>
+<span id="cb3-5"><a href=""></a>})</span>
+<span id="cb3-6"><a href=""></a>tsgroup</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<pre><code>  Index    rate
+-------  ------
+      1    1.25
+      2    1</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div id="f1318532" class="cell" data-execution_count="6">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides_files/figure-revealjs/cell-7-output-1.png" width="491" height="299"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="time-series-with-data-tsd" class="slide level2">
+<h2>Time series with data (<code>Tsd</code>)</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div id="a1dabe67" class="cell" data-execution_count="8">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href=""></a><span class="im">import</span> pynapple <span class="im">as</span> nap</span>
+<span id="cb5-2"><a href=""></a>tsd <span class="op">=</span> nap.Tsd(t<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>], d<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">1</span>])</span>
+<span id="cb5-3"><a href=""></a>tsd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<pre><code>Time (s)
+----------  --
+1            1
+2            1
+3            1
+4            2
+5            1
+dtype: int64, shape: (5,)</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:60%;">
+<div id="c9400dcd" class="cell" data-execution_count="9">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides_files/figure-revealjs/cell-10-output-1.png" width="491" height="299"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="time-series-with-multiple-data-columns-tsdframe" class="slide level2">
+<h2>Time series with multiple data columns (<code>TsdFrame</code>)</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div id="93acf6de" class="cell" data-execution_count="11">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href=""></a><span class="im">import</span> pynapple <span class="im">as</span> nap</span>
+<span id="cb7-2"><a href=""></a>tsdframe <span class="op">=</span> nap.TsdFrame(</span>
+<span id="cb7-3"><a href=""></a>    t<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>], </span>
+<span id="cb7-4"><a href=""></a>    d<span class="op">=</span>[[<span class="dv">1</span>,<span class="dv">2</span>],</span>
+<span id="cb7-5"><a href=""></a>       [<span class="dv">1</span>,<span class="dv">2</span>],</span>
+<span id="cb7-6"><a href=""></a>       [<span class="dv">1</span>,<span class="dv">3</span>],</span>
+<span id="cb7-7"><a href=""></a>       [<span class="dv">2</span>,<span class="dv">1</span>],</span>
+<span id="cb7-8"><a href=""></a>       [<span class="dv">1</span>,<span class="dv">2</span>]],</span>
+<span id="cb7-9"><a href=""></a>    columns<span class="op">=</span>[<span class="st">"A"</span>, <span class="st">"B"</span>]</span>
+<span id="cb7-10"><a href=""></a>)</span>
+<span id="cb7-11"><a href=""></a>tsdframe</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="11">
+<pre><code>Time (s)      A    B
+----------  ---  ---
+1             1    2
+2             1    2
+3             1    3
+4             2    1
+5             1    2
+dtype: int64, shape: (5, 2)</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:60%;">
+<div id="296e4974" class="cell" data-execution_count="12">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides_files/figure-revealjs/cell-13-output-1.png" width="491" height="299"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section class="slide level2">
+
+
+</section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
