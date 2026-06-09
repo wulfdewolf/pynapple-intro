@@ -41,14 +41,7 @@ presently with the Flatiron Institute's neuroRSE team:
 :::
 :::
 
-::: {.columns valign="middle"}
-::: {.column style="text-align:left;"}
-![](https://pynapple.org/_images/CCN-logo-wText.png){style="height:180px; width:auto; object-fit:contain;"}
-:::
-::: {.column style="text-align:right;"}
-![](https://uc7f483922227862222262919046.previews.dropboxusercontent.com/p/thumb/ADCQmT3crbxNKsumOBw-hBoAvujpIjSiTW7Xk_8khIdTkbqxafLBTEiITOAjf63cG1PmGKyBribYWd0LztWZaNpLfAjOmzb0LAdesx_DuGcZmrww48hke1imMSOjszHAvyXfuh-5E2emz77z5G8VnSZzk-UOrho_8AWqc5EzCG2wlzL8rQ68oVSh0tbUgA_Q8JkWiGgt0Azq9-Ukq65felOEzurObQULL6wlsc5aZfgLSDMgCyinJGNx2Zgmb4dpoxrXJuPZQdE6_46lwhpvYMKzXUO59kksGz5o6va2cl4K38jqb0lllEnQeg7c4PZL2nJGanYWzBoj5QRkI_3DDldAetz-VLkkXz5o2SmQ9tMwkA/p.png){style="height:180px; width:70%; object-fit:contain;"}
-:::
-:::
+![](https://pynapple.org/_images/CCN-logo-wText.png){width=40%}
 
 
 ## Pynapple fundamentals
