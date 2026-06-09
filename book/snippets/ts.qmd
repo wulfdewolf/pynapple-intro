@@ -1,0 +1,39 @@
+## Time series (`Ts`)
+
+```{python}
+#| echo: false
+import seaborn as sns
+
+custom_params = {"axes.spines.right": False, "axes.spines.top": False}
+sns.set_theme(style="ticks", rc=custom_params)
+```
+
+::: {.columns}
+
+::: {.column width="40%"}
+```{python}
+
+import pynapple as nap
+ts = nap.Ts(t=[1,2,3,4,5])
+ts
+```
+:::
+
+::: {.column width="60%"}
+```{python}
+#| echo: false
+
+import matplotlib.pyplot as plt
+import numpy as np
+fig, ax = plt.subplots(constrained_layout=True, figsize=(5,3))
+for timepoint in ts.times():
+    ax.axvline(timepoint)
+ax.yaxis.set_visible(False)
+ax.spines['left'].set_visible(False)
+ax.set_xlabel("time (s)")
+plt.show()
+```
+:::
+
+:::
+---

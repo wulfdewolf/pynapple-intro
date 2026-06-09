@@ -50,12 +50,16 @@ book:
         - 02-maintainers.qmd
     - part: Pynapple fundamentals
       chapters:
-        - 03-time-series.qmd
+        - snippets/ts.qmd
+        - snippets/tsgroup.qmd
+        - snippets/tsd.qmd
+        - snippets/tsdframe.qmd
     - part: Practise
       chapters:
         - project-ideas.qmd
 
 format:
   html:
+    page-layout: full
     theme:
       - flatly

@@ -3,3 +3,4 @@ _site/
 /.quarto/
 **/*.quarto_ipynb
 slides_files/
+_freeze/

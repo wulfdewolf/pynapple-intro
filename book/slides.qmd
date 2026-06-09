@@ -1,5 +1,8 @@
 ---
-format: revealjs
+format:
+  revealjs:
+    echo: true
+jupyter: python3
 ---
 
 ## 
@@ -44,17 +47,12 @@ presently with the Flatiron Institute's neuroRSE team:
 ![](https://pynapple.org/_images/CCN-logo-wText.png){width=40%}
 
 
-## Pynapple fundamentals
-```python
-import pynapple as nap
-```
+# Pynapple fundamentals
 
-- Time series
-```python {.number-lines startFrom=2}
-ts = nap.Ts(t=[1,2,3,4,5])
-```
+{{< include snippets/ts.qmd >}}
 
-- Time series with data
-```python {.number-lines startFrom=3}
-ts = nap.Ts(t=[1,2,3,4,5], d=[0, 0, 0, 1, 1])
-```
+{{< include snippets/tsgroup.qmd >}}
+
+{{< include snippets/tsd.qmd >}}
+
+{{< include snippets/tsdframe.qmd >}}
