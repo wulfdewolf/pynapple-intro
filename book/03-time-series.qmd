@@ -1,5 +1,0 @@
----
-title: Various time series
----
-
-{{< include snippets/tsd.qmd >}}

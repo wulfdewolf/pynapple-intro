@@ -56,3 +56,5 @@ presently with the Flatiron Institute's neuroRSE team:
 {{< include snippets/tsd.qmd >}}
 
 {{< include snippets/tsdframe.qmd >}}
+
+{{< include snippets/intervalset.qmd >}}

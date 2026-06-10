@@ -46,15 +46,47 @@ book:
     - index.qmd
     - part: History
       chapters:
-        - 01-origins.qmd
-        - 02-maintainers.qmd
+        - origins.qmd
+        - maintainers.qmd
     - part: Pynapple fundamentals
       chapters:
         - snippets/ts.qmd
         - snippets/tsgroup.qmd
         - snippets/tsd.qmd
         - snippets/tsdframe.qmd
-    - part: Practise
+        - snippets/intervalset.qmd
+    - part: Interactions
+      chapters:
+        - snippets/timesupport.qmd
+        - snippets/restrict.qmd
+        - snippets/value_from.qmd
+    - part: Wrangling
+      chapters:
+        - snippets/numpy.qmd
+        - snippets/slicing.qmd
+    - part: Core functions
+      chapters:
+        - snippets/binning.qmd
+        - snippets/averaging.qmd
+        - snippets/thresholding.qmd
+    - part: Advanced functions
+      chapters:
+        - snippets/tuning_curves.qmd
+        - snippets/correlogram.qmd
+        - snippets/filtering.qmd
+        - snippets/perievent.qmd
+        - snippets/decoding.qmd
+        - snippets/psd.qmd
+    - part: Integration with other packages
+      chapters:
+        - snippets/pynaviz.qmd
+        - snippets/nemos.qmd
+        - snippets/spikeinterface.qmd
+    - part: Data
+      chapters:
+        - snippets/loading.qmd
+        - snippets/streaming.qmd
+    - part: Your turn
       chapters:
         - project-ideas.qmd
 
