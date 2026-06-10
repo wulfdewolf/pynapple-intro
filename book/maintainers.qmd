@@ -1,3 +1,22 @@
 ---
 title: Maintainers
 ---
+## Python Neural Analysis Package
+
+presently with the Flatiron Institute's neuroRSE team:
+
+::: {.columns valign="middle"}
+::: {.column style="text-align:left;"}
+- __Guillaume Viejo__
+- __Sarah Jo Venditto__
+- Edoardo Balzani
+- William Broderick
+
+\+ __me__, a 2025 neuroRSE intern
+:::
+::: {.column style="text-align:right;"}
+![](https://githubcard.com/pynapple-org/pynapple.svg?d=M3uYZ4nV)
+:::
+:::
+
+![](https://pynapple.org/_images/CCN-logo-wText.png){width=40%}

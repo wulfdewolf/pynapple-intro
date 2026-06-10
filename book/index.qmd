@@ -1,7 +1,7 @@
 ---
+title: Preface
 toc: False
 ---
-# Preface {.unnumbered}
 
 Welcome to this introduction to [Pynapple](pynapple.org).  
 Pynapple is a python package for analysing neural data.  
@@ -15,19 +15,8 @@ pip install pynapple
 
 Now just open your favourite way of running Python, and follow along!
 
-<style>
-.slide-deck {
-    border: 3px solid #dee2e6;
-    width: 100%;
-    height: 475px;
-}
-</style>
-
-<div>
-```{=html}
-<iframe class="slide-deck" src="slides.html"></iframe>
-```
-</div>
-
 ---
-[![](https://pynapple.org/_images/CCN-logo-wText.png){width=50%}](https://www.simonsfoundation.org/flatiron/)
+::: {style="display:flex; align-items:center; gap:1em;"}
+[![](assets/logo.png){width=10%}](pynapple.org)
+[![](https://pynapple.org/_images/CCN-logo-wText.png){width=30%}](https://www.simonsfoundation.org/flatiron/)
+:::

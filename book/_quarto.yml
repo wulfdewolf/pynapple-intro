@@ -9,7 +9,7 @@ execute:
   freeze: auto
 
 book:
-  title: "An introduction to Pynapple"
+  title: An introduction to Pynapple
   author:
     - name: Wolf De Wulf
       url: https://wulfdewolf.github.io
@@ -44,10 +44,7 @@ book:
   date: "02/06/2026"
   chapters:
     - index.qmd
-    - part: History
-      chapters:
-        - origins.qmd
-        - maintainers.qmd
+    - origins.qmd
     - part: Pynapple fundamentals
       chapters:
         - snippets/ts.qmd
@@ -95,3 +92,5 @@ format:
     page-layout: full
     theme:
       - flatly
+    grid:
+      margin-width: 1000px
