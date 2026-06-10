@@ -4,9 +4,19 @@
     "href": "index.html",
     "title": "An introduction to Pynapple",
     "section": "",
-    "text": "Preface\nWelcome to this introduction to Pynapple.\nPynapple is a python package for analysing neural data.\nThe package is actively maintained by the Flatiron Institute’s neuroRSE team.\nThe only thing you’ll need to follow along is a working Python environment with pynapple installed:\npip install pynapple\nNow just open your favourite way of running Python, and follow along!",
+    "text": "Welcome to this introduction to Pynapple.\nPynapple is a python package for analysing neural data.\nThe package is actively maintained by the Flatiron Institute’s neuroRSE team.\nThe only thing you’ll need to follow along is a working Python environment with pynapple installed:\npip install pynapple\nNow just open your favourite way of running Python, and follow along!",
     "crumbs": [
-      "Preface"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Preface</span>"
+    ]
+  },
+  {
+    "objectID": "origins.html",
+    "href": "origins.html",
+    "title": "2  Origins",
+    "section": "",
+    "text": "2000: TSToolbox, MATLAB\nMcNaughton lab: David Redish & Francesco Battaglia\n2016: TSToolbox2, MATLAB\nAdrien Peyrache & Luke Sjulson\n2018: neuroseries, Python\nFrancesco Battaglia\n2021: pynapple, Python\nGuillaume Viejo\n\n\npresently with the Flatiron Institute’s neuroRSE team:\n\nGuillaume Viejo\nSarah Jo Venditto\nEdoardo Balzani\nWilliam Broderick\n\n+ me, a 2025 neuroRSE intern",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Origins</span>"
     ]
   },
   {
@@ -124,7 +134,7 @@
     "href": "snippets/binning.html",
     "title": "13  Binning (count)",
     "section": "",
-    "text": "import pynapple as nap\nepochs = nap.IntervalSet(\n    start=[1, 3, 7],\n    end=[2, 5, 9]\n)\nepochs\n\n  index    start    end\n      0        1      2\n      1        3      5\n      2        7      9\nshape: (3, 2), time unit: sec.",
+    "text": "import pynapple as nap\nimport numpy as np\ndt = 0.001\ntimes = np.arange(0, 4, dt)\nrate = 40 * (1 + np.sin(2*np.pi*times)) / 2\nspikes = nap.Ts(times[np.random.rand(len(times)) &lt; rate * dt])\ncounts = spikes.count(0.1)\ncounts\n\nTime (s)\n-------------------  --\n0.07300000000000001   4\n0.173                 2\n0.273                 5\n0.373                 2\n0.473                 3\n0.5730000000000001    0\n0.673                 0\n...\n3.2729999999999997    5\n3.3729999999999998    4\n3.473                 2\n3.573                 1\n3.673                 0\n3.7729999999999997    0\n3.8729999999999998    0\ndtype: int64, shape: (39,)",
     "crumbs": [
       "Core functions",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Binning (`count`)</span>"
@@ -135,7 +145,7 @@
     "href": "snippets/averaging.html",
     "title": "14  Averaging (bin_average)",
     "section": "",
-    "text": "import pynapple as nap\nepochs = nap.IntervalSet(\n    start=[1, 3, 7],\n    end=[2, 5, 9]\n)\nepochs\n\n  index    start    end\n      0        1      2\n      1        3      5\n      2        7      9\nshape: (3, 2), time unit: sec.",
+    "text": "import pynapple as nap\nimport numpy as np\ntimes = np.arange(0, 10, 0.01)\nsignal = np.sin(2 * np.pi * times) \nsignal += 0.2 * np.random.randn(len(times))\ntsd = nap.Tsd(t=times, d=signal)\naveraged = tsd.bin_average(0.2)\naveraged\n\nTime (s)\n-------------------  ----------\n0.1                   0.414235\n0.30000000000000004   0.906529\n0.5                   0.068329\n0.7                  -0.915047\n0.9                  -0.587246\n1.1                   0.405121\n1.3                   0.957122\n...\n8.7                  -0.863862\n8.9                  -0.587099\n9.1                   0.624378\n9.299999999999999     0.894488\n9.5                   0.0235118\n9.7                  -0.975877\n9.9                  -0.509235\ndtype: float64, shape: (50,)",
     "crumbs": [
       "Core functions",
       "<span class='chapter-number'>14</span>  <span class='chapter-title'>Averaging (`bin_average`)</span>"
@@ -146,7 +156,7 @@
     "href": "snippets/thresholding.html",
     "title": "15  Thresholding (threshold)",
     "section": "",
-    "text": "import pynapple as nap\nepochs = nap.IntervalSet(\n    start=[1, 3, 7],\n    end=[2, 5, 9]\n)\nepochs\n\n  index    start    end\n      0        1      2\n      1        3      5\n      2        7      9\nshape: (3, 2), time unit: sec.",
+    "text": "import pynapple as nap\nimport numpy as np\ntimes = np.arange(0, 10, 0.01)\nsignal = np.sin(2 * np.pi * times) \nsignal += 0.2 * np.random.randn(len(times))\ntsd = nap.Tsd(t=times, d=signal)\nabove = tsd.threshold(0.5, method=\"above\")\nbelow = tsd.threshold(-.5, method=\"below\")\nabove.time_support\n\nindex    start               end\n0        0.055               0.07500000000000001\n1        0.095               0.395\n2        0.405               0.41500000000000004\n3        0.435               0.445\n4        1.0750000000000002  1.1150000000000002\n5        1.125               1.3850000000000002\n6        1.395               1.415\n...      ...                 ...\n38       8.395               8.405000000000001\n39       8.415               8.434999999999999\n40       9.035               9.055\n41       9.065000000000001   9.094999999999999\n42       9.115               9.125\n43       9.135000000000002   9.405000000000001\n44       9.415               9.425\nshape: (45, 2), time unit: sec.",
     "crumbs": [
       "Core functions",
       "<span class='chapter-number'>15</span>  <span class='chapter-title'>Thresholding (`threshold`)</span>"
