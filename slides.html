@@ -259,7 +259,7 @@ Guillaume Viejo</p>
 <h2>Time series (<code>Ts</code>)</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
-<div id="8638fac4" class="cell" data-execution_count="2">
+<div id="244577cd" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="im">import</span> pynapple <span class="im">as</span> nap</span>
 <span id="cb1-2"><a href=""></a>ts <span class="op">=</span> nap.Ts(t<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>])</span>
 <span id="cb1-3"><a href=""></a>ts</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -274,7 +274,7 @@ shape: 5</code></pre>
 </div>
 </div>
 </div><div class="column" style="width:60%;">
-<div id="a53ca7e0" class="cell" data-execution_count="3">
+<div id="8f811c57" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -289,7 +289,7 @@ shape: 5</code></pre>
 <h2>Multiple time series (<code>TsGroup</code>)</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div id="f382f5ff" class="cell" data-execution_count="5">
+<div id="6a7c5e2d" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href=""></a><span class="im">import</span> pynapple <span class="im">as</span> nap</span>
 <span id="cb3-2"><a href=""></a>tsgroup <span class="op">=</span> nap.TsGroup({</span>
 <span id="cb3-3"><a href=""></a>    <span class="dv">1</span>: nap.Ts([<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]), </span>
@@ -304,7 +304,7 @@ shape: 5</code></pre>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
-<div id="f1318532" class="cell" data-execution_count="6">
+<div id="20ea6229" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -319,7 +319,7 @@ shape: 5</code></pre>
 <h2>Time series with data (<code>Tsd</code>)</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
-<div id="a1dabe67" class="cell" data-execution_count="8">
+<div id="d225946a" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href=""></a><span class="im">import</span> pynapple <span class="im">as</span> nap</span>
 <span id="cb5-2"><a href=""></a>tsd <span class="op">=</span> nap.Tsd(t<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>], d<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">1</span>])</span>
 <span id="cb5-3"><a href=""></a>tsd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -335,7 +335,7 @@ dtype: int64, shape: (5,)</code></pre>
 </div>
 </div>
 </div><div class="column" style="width:60%;">
-<div id="c9400dcd" class="cell" data-execution_count="9">
+<div id="2bb26a7d" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -350,7 +350,7 @@ dtype: int64, shape: (5,)</code></pre>
 <h2>Time series with multiple data columns (<code>TsdFrame</code>)</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
-<div id="93acf6de" class="cell" data-execution_count="11">
+<div id="9104e44b" class="cell" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href=""></a><span class="im">import</span> pynapple <span class="im">as</span> nap</span>
 <span id="cb7-2"><a href=""></a>tsdframe <span class="op">=</span> nap.TsdFrame(</span>
 <span id="cb7-3"><a href=""></a>    t<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>], </span>
@@ -374,11 +374,42 @@ dtype: int64, shape: (5, 2)</code></pre>
 </div>
 </div>
 </div><div class="column" style="width:60%;">
-<div id="296e4974" class="cell" data-execution_count="12">
+<div id="520617a1" class="cell" data-execution_count="12">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
 <p><img data-src="slides_files/figure-revealjs/cell-13-output-1.png" width="491" height="299"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="intervals-intervalset" class="slide level2">
+<h2>Intervals (<code>IntervalSet</code>)</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div id="353f6b4b" class="cell" data-execution_count="14">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href=""></a><span class="im">import</span> pynapple <span class="im">as</span> nap</span>
+<span id="cb9-2"><a href=""></a>epochs <span class="op">=</span> nap.IntervalSet(</span>
+<span id="cb9-3"><a href=""></a>    start<span class="op">=</span>[<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">7</span>],</span>
+<span id="cb9-4"><a href=""></a>    end<span class="op">=</span>[<span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">9</span>]</span>
+<span id="cb9-5"><a href=""></a>)</span>
+<span id="cb9-6"><a href=""></a>epochs</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="14">
+<pre><code>  index    start    end
+      0        1      2
+      1        3      5
+      2        7      9
+shape: (3, 2), time unit: sec.</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:60%;">
+<div id="254d58e9" class="cell" data-execution_count="15">
+<div class="cell-output cell-output-display">
+<div>
+<figure>
+<p><img data-src="slides_files/figure-revealjs/cell-16-output-1.png" width="491" height="299"></p>
 </figure>
 </div>
 </div>
