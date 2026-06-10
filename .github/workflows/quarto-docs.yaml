@@ -50,13 +50,6 @@ jobs:
         uses: quarto-dev/quarto-actions/setup@v2
 
       # ---------------------------
-      # Render slides
-      # ---------------------------
-      - name: Render slides
-        run: |
-          quarto render book/slides.qmd
-
-      # ---------------------------
       # Publish
       # ---------------------------
       - name: Publish to gh-pages
