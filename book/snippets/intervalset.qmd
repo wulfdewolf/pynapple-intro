@@ -1,4 +1,7 @@
-## Intervals (`IntervalSet`)
+---
+title: Intervals (`IntervalSet`)
+toc: false
+---
 
 ```{python}
 #| echo: false

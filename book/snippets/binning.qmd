@@ -1,4 +1,7 @@
-## Binning (`count`)
+---
+title: Binning (`count`)
+toc: false
+---
 ```{python}
 #| include: false
 exec(open("../settings.py").read())

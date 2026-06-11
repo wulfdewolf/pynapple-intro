@@ -1,5 +1,5 @@
 ---
-title: Time supports (`time_support`)
+title: Smoothing (`smooth`)
 toc: false
 ---
 ```{python}
@@ -12,26 +12,29 @@ exec(open("../settings.py").read())
 ::: {.column width="40%"}
 ```{python}
 import pynapple as nap
-ts = nap.Ts(t=[1,2,3,4,5])
-ts.time_support
+import numpy as np
+times = np.arange(0, 10, 0.01)
+signal = np.sin(2 * np.pi * times) 
+signal += 0.2 * np.random.randn(len(times))
+tsd = nap.Tsd(t=times, d=signal)
+smoothed = tsd.smooth(std=0.1)
+smoothed
 ```
 :::
 
 ::: {.column width="60%"}
 ```{python}
 #| echo: false
+
 import matplotlib.pyplot as plt
 fig, ax = plt.subplots(constrained_layout=True, figsize=(5,3))
-for timepoint in ts.times():
-    ax.axvline(timepoint)
-for start, stop in ts.time_support.values:
-    ax.axvspan(start, stop, alpha=0.2)
-ax.yaxis.set_visible(False)
-ax.spines['left'].set_visible(False)
+ax.plot(tsd, label="original")
+ax.plot(smoothed, label="smoothed")
+ax.set_ylabel("data (a.u.)")
 ax.set_xlabel("time (s)")
+fig.legend(loc="outside right upper")
 plt.show()
 ```
 :::
-
 :::
 ---

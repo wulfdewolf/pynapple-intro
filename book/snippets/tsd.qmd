@@ -1,21 +1,24 @@
-## Time series with data (`Tsd`)
-
+---
+title: Time series with data (`Tsd`)
+toc: false
+---
 ```{python}
-#| echo: false
-import seaborn as sns
-
-custom_params = {"axes.spines.right": False, "axes.spines.top": False}
-sns.set_theme(style="ticks", rc=custom_params)
+#| include: false
+exec(open("../settings.py").read())
 ```
 
 ::: {.columns}
 
 ::: {.column width="40%"}
 ```{python}
-
 import pynapple as nap
-tsd = nap.Tsd(t=[1,2,3,4,5], d=[1,1,1,2,1])
-tsd
+import numpy as np
+times = np.arange(0, 10, 0.01)
+signal = np.sin(2 * np.pi * times) 
+signal += 0.2 * np.random.randn(len(times))
+tsd = nap.Tsd(t=times, d=signal)
+smoothed = tsd.smooth(std=0.1)
+smoothed
 ```
 :::
 
@@ -24,14 +27,12 @@ tsd
 #| echo: false
 
 import matplotlib.pyplot as plt
-import numpy as np
 fig, ax = plt.subplots(constrained_layout=True, figsize=(5,3))
-ax.plot(tsd)
-ax.set_ylabel("data (a.u.)")
-ax.set_xlabel("time (s)")
+ax.plot(tsd, label="original")
+ax.plot(smoothed, label="smoothed")
+fig.legend()
 plt.show()
 ```
 :::
-
 :::
 ---

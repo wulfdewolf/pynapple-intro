@@ -66,6 +66,7 @@ book:
         - snippets/binning.qmd
         - snippets/averaging.qmd
         - snippets/thresholding.qmd
+        - snippets/smoothing.qmd
     - part: Advanced functions
       chapters:
         - snippets/tuning_curves.qmd

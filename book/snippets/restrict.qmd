@@ -1,35 +1,35 @@
-## Restricting time series (`restrict`)
-
+---
+title: Restricting time series (`restrict`)
+toc: false
+---
 ```{python}
-#| echo: false
-import seaborn as sns
-
-custom_params = {"axes.spines.right": False, "axes.spines.top": False}
-sns.set_theme(style="ticks", rc=custom_params)
+#| include: false
+exec(open("../settings.py").read())
 ```
 
 ::: {.columns}
 
 ::: {.column width="40%"}
 ```{python}
-
 import pynapple as nap
-epochs = nap.IntervalSet(
-    start=[1, 3, 7],
-    end=[2, 5, 9]
-)
-epochs
+ts = nap.Ts(t=[1,2,3,4,5])
+restriction = nap.IntervalSet(start=[1.3, 3.9], end=[3.5, 4.2])
+restricted = ts.restrict(restriction)
+restricted
 ```
 :::
 
 ::: {.column width="60%"}
 ```{python}
 #| echo: false
-
 import matplotlib.pyplot as plt
 fig, ax = plt.subplots(constrained_layout=True, figsize=(5,3))
-for start, stop in epochs.values:
-    ax.axvspan(start, stop)
+for timepoint in restricted.times():
+    ax.axvline(timepoint)
+for start, stop in restricted.time_support.values:
+    ax.axvspan(start, stop, alpha=0.2)
+ax.yaxis.set_visible(False)
+ax.spines['left'].set_visible(False)
 ax.set_xlabel("time (s)")
 plt.show()
 ```

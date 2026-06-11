@@ -1,4 +1,8 @@
-## Averaging (`bin_average`)
+---
+title: Averaging (`bin_average`)
+toc: false
+---
+
 ```{python}
 #| include: false
 exec(open("../settings.py").read())

@@ -1,11 +1,10 @@
-## Time series with multiple data columns (`TsdFrame`)
-
+---
+title: Time series with multiple data columns (`TsdFrame`)
+toc: false
+---
 ```{python}
-#| echo: false
-import seaborn as sns
-
-custom_params = {"axes.spines.right": False, "axes.spines.top": False}
-sns.set_theme(style="ticks", rc=custom_params)
+#| include: false
+exec(open("../settings.py").read())
 ```
 
 ::: {.columns}
