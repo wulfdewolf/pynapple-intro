@@ -2,110 +2,114 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://pynapple.org/index.html</loc>
-    <lastmod>2026-06-10T21:19:16.693Z</lastmod>
+    <lastmod>2026-06-11T15:54:19.316Z</lastmod>
   </url>
   <url>
     <loc>https://pynapple.org/origins.html</loc>
-    <lastmod>2026-06-10T21:19:16.693Z</lastmod>
+    <lastmod>2026-06-11T15:54:19.316Z</lastmod>
   </url>
   <url>
     <loc>https://pynapple.org/snippets/ts.html</loc>
-    <lastmod>2026-06-10T21:19:16.694Z</lastmod>
+    <lastmod>2026-06-11T15:54:19.317Z</lastmod>
   </url>
   <url>
     <loc>https://pynapple.org/snippets/tsgroup.html</loc>
-    <lastmod>2026-06-10T21:19:16.694Z</lastmod>
+    <lastmod>2026-06-11T15:54:19.317Z</lastmod>
   </url>
   <url>
     <loc>https://pynapple.org/snippets/tsd.html</loc>
-    <lastmod>2026-06-10T21:19:16.694Z</lastmod>
+    <lastmod>2026-06-11T15:54:19.317Z</lastmod>
   </url>
   <url>
     <loc>https://pynapple.org/snippets/tsdframe.html</loc>
-    <lastmod>2026-06-10T21:19:16.694Z</lastmod>
+    <lastmod>2026-06-11T15:54:19.317Z</lastmod>
   </url>
   <url>
     <loc>https://pynapple.org/snippets/intervalset.html</loc>
-    <lastmod>2026-06-10T21:19:16.694Z</lastmod>
+    <lastmod>2026-06-11T15:54:19.317Z</lastmod>
   </url>
   <url>
     <loc>https://pynapple.org/snippets/timesupport.html</loc>
-    <lastmod>2026-06-10T21:19:16.694Z</lastmod>
+    <lastmod>2026-06-11T15:54:19.317Z</lastmod>
   </url>
   <url>
     <loc>https://pynapple.org/snippets/restrict.html</loc>
-    <lastmod>2026-06-10T21:19:16.694Z</lastmod>
+    <lastmod>2026-06-11T15:54:19.317Z</lastmod>
   </url>
   <url>
     <loc>https://pynapple.org/snippets/value_from.html</loc>
-    <lastmod>2026-06-10T21:19:16.694Z</lastmod>
+    <lastmod>2026-06-11T15:54:19.317Z</lastmod>
   </url>
   <url>
     <loc>https://pynapple.org/snippets/numpy.html</loc>
-    <lastmod>2026-06-10T21:19:16.694Z</lastmod>
+    <lastmod>2026-06-11T15:54:19.317Z</lastmod>
   </url>
   <url>
     <loc>https://pynapple.org/snippets/slicing.html</loc>
-    <lastmod>2026-06-10T21:19:16.694Z</lastmod>
+    <lastmod>2026-06-11T15:54:19.317Z</lastmod>
   </url>
   <url>
     <loc>https://pynapple.org/snippets/binning.html</loc>
-    <lastmod>2026-06-10T21:19:16.694Z</lastmod>
+    <lastmod>2026-06-11T15:54:19.317Z</lastmod>
   </url>
   <url>
     <loc>https://pynapple.org/snippets/averaging.html</loc>
-    <lastmod>2026-06-10T21:19:16.693Z</lastmod>
+    <lastmod>2026-06-11T15:54:19.316Z</lastmod>
   </url>
   <url>
     <loc>https://pynapple.org/snippets/thresholding.html</loc>
-    <lastmod>2026-06-10T21:19:16.694Z</lastmod>
+    <lastmod>2026-06-11T15:54:19.317Z</lastmod>
+  </url>
+  <url>
+    <loc>https://pynapple.org/snippets/smoothing.html</loc>
+    <lastmod>2026-06-11T15:54:19.317Z</lastmod>
   </url>
   <url>
     <loc>https://pynapple.org/snippets/tuning_curves.html</loc>
-    <lastmod>2026-06-10T21:19:16.694Z</lastmod>
+    <lastmod>2026-06-11T15:54:19.317Z</lastmod>
   </url>
   <url>
     <loc>https://pynapple.org/snippets/correlogram.html</loc>
-    <lastmod>2026-06-10T21:19:16.694Z</lastmod>
+    <lastmod>2026-06-11T15:54:19.317Z</lastmod>
   </url>
   <url>
     <loc>https://pynapple.org/snippets/filtering.html</loc>
-    <lastmod>2026-06-10T21:19:16.694Z</lastmod>
+    <lastmod>2026-06-11T15:54:19.317Z</lastmod>
   </url>
   <url>
     <loc>https://pynapple.org/snippets/perievent.html</loc>
-    <lastmod>2026-06-10T21:19:16.694Z</lastmod>
+    <lastmod>2026-06-11T15:54:19.317Z</lastmod>
   </url>
   <url>
     <loc>https://pynapple.org/snippets/decoding.html</loc>
-    <lastmod>2026-06-10T21:19:16.694Z</lastmod>
+    <lastmod>2026-06-11T15:54:19.317Z</lastmod>
   </url>
   <url>
     <loc>https://pynapple.org/snippets/psd.html</loc>
-    <lastmod>2026-06-10T21:19:16.694Z</lastmod>
+    <lastmod>2026-06-11T15:54:19.317Z</lastmod>
   </url>
   <url>
     <loc>https://pynapple.org/snippets/pynaviz.html</loc>
-    <lastmod>2026-06-10T21:19:16.694Z</lastmod>
+    <lastmod>2026-06-11T15:54:19.317Z</lastmod>
   </url>
   <url>
     <loc>https://pynapple.org/snippets/nemos.html</loc>
-    <lastmod>2026-06-10T21:19:16.694Z</lastmod>
+    <lastmod>2026-06-11T15:54:19.317Z</lastmod>
   </url>
   <url>
     <loc>https://pynapple.org/snippets/spikeinterface.html</loc>
-    <lastmod>2026-06-10T21:19:16.694Z</lastmod>
+    <lastmod>2026-06-11T15:54:19.317Z</lastmod>
   </url>
   <url>
     <loc>https://pynapple.org/snippets/loading.html</loc>
-    <lastmod>2026-06-10T21:19:16.694Z</lastmod>
+    <lastmod>2026-06-11T15:54:19.317Z</lastmod>
   </url>
   <url>
     <loc>https://pynapple.org/snippets/streaming.html</loc>
-    <lastmod>2026-06-10T21:19:16.694Z</lastmod>
+    <lastmod>2026-06-11T15:54:19.317Z</lastmod>
   </url>
   <url>
     <loc>https://pynapple.org/project-ideas.html</loc>
-    <lastmod>2026-06-10T21:19:16.693Z</lastmod>
+    <lastmod>2026-06-11T15:54:19.316Z</lastmod>
   </url>
 </urlset>

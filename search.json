@@ -46,7 +46,7 @@
     "href": "snippets/tsd.html",
     "title": "5  Time series with data (Tsd)",
     "section": "",
-    "text": "import pynapple as nap\ntsd = nap.Tsd(t=[1,2,3,4,5], d=[1,1,1,2,1])\ntsd\n\nTime (s)\n----------  --\n1            1\n2            1\n3            1\n4            2\n5            1\ndtype: int64, shape: (5,)",
+    "text": "import pynapple as nap\nimport numpy as np\ntimes = np.arange(0, 10, 0.01)\nsignal = np.sin(2 * np.pi * times) \nsignal += 0.2 * np.random.randn(len(times))\ntsd = nap.Tsd(t=times, d=signal)\nsmoothed = tsd.smooth(std=0.1)\nsmoothed\n\nTime (s)\n-----------------  ---------\n0.0                 0.259051\n0.01                0.288429\n0.02                0.319052\n0.03                0.350698\n0.04                0.383126\n0.05                0.416075\n0.06                0.449272\n...\n9.93               -0.404017\n9.94               -0.372995\n9.950000000000001  -0.342493\n9.96               -0.312746\n9.97               -0.283968\n9.98               -0.256349\n9.99               -0.230051\ndtype: float64, shape: (1000,)",
     "crumbs": [
       "Pynapple fundamentals",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Time series with data (`Tsd`)</span>"
@@ -79,7 +79,7 @@
     "href": "snippets/timesupport.html",
     "title": "8  Time supports (time_support)",
     "section": "",
-    "text": "import pynapple as nap\nepochs = nap.IntervalSet(\n    start=[1, 3, 7],\n    end=[2, 5, 9]\n)\nepochs\n\n  index    start    end\n      0        1      2\n      1        3      5\n      2        7      9\nshape: (3, 2), time unit: sec.",
+    "text": "import pynapple as nap\nts = nap.Ts(t=[1,2,3,4,5])\nts.time_support\n\n  index    start    end\n      0        1      5\nshape: (1, 2), time unit: sec.",
     "crumbs": [
       "Interactions",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Time supports (`time_support`)</span>"
@@ -90,7 +90,7 @@
     "href": "snippets/restrict.html",
     "title": "9  Restricting time series (restrict)",
     "section": "",
-    "text": "import pynapple as nap\nepochs = nap.IntervalSet(\n    start=[1, 3, 7],\n    end=[2, 5, 9]\n)\nepochs\n\n  index    start    end\n      0        1      2\n      1        3      5\n      2        7      9\nshape: (3, 2), time unit: sec.",
+    "text": "import pynapple as nap\nts = nap.Ts(t=[1,2,3,4,5])\nrestriction = nap.IntervalSet(start=[1.3, 3.9], end=[3.5, 4.2])\nrestricted = ts.restrict(restriction)\nrestricted\n\nTime (s)\n2.0\n3.0\n4.0\nshape: 3",
     "crumbs": [
       "Interactions",
       "<span class='chapter-number'>9</span>  <span class='chapter-title'>Restricting time series (`restrict`)</span>"
@@ -101,7 +101,7 @@
     "href": "snippets/value_from.html",
     "title": "10  Taking values (value_from)",
     "section": "",
-    "text": "import pynapple as nap\nepochs = nap.IntervalSet(\n    start=[1, 3, 7],\n    end=[2, 5, 9]\n)\nepochs\n\n  index    start    end\n      0        1      2\n      1        3      5\n      2        7      9\nshape: (3, 2), time unit: sec.",
+    "text": "import pynapple as nap\nimport numpy as np\nts = nap.Ts(t=[1,2,3,4,5])\ntsd = nap.Tsd(t=np.arange(0, 10, 0.1), d=np.random.randn(100))\nvalues = ts.value_from(tsd)\nvalues\n\nTime (s)\n----------  ---------\n1           -0.418698\n2           -0.162501\n3            0.840042\n4            0.981348\n5            1.78729\ndtype: float64, shape: (5,)",
     "crumbs": [
       "Interactions",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Taking values (`value_from`)</span>"
@@ -110,12 +110,12 @@
   {
     "objectID": "snippets/numpy.html",
     "href": "snippets/numpy.html",
-    "title": "11  Numpy operations",
+    "title": "11  Numpy",
     "section": "",
-    "text": "import pynapple as nap\nepochs = nap.IntervalSet(\n    start=[1, 3, 7],\n    end=[2, 5, 9]\n)\nepochs\n\n  index    start    end\n      0        1      2\n      1        3      5\n      2        7      9\nshape: (3, 2), time unit: sec.",
+    "text": "import pynapple as nap\nimport numpy as np\ntsdframe = nap.TsdFrame(\n    t=[1,2,3,4,5], \n    d=[[1,2],\n       [1,2],\n       [1,3],\n       [2,1],\n       [1,2]],\n    columns=[\"A\", \"B\"]\n)\nnp.mean(tsdframe, axis=1)\n\nTime (s)\n----------  ---\n1           1.5\n2           1.5\n3           2\n4           1.5\n5           1.5\ndtype: float64, shape: (5,)\n\n\n\n\nimport pynapple as nap\nimport numpy as np\ntsdframe = nap.TsdFrame(\n    t=[1,2,3,4,5], \n    d=[[1,2],\n       [1,2],\n       [1,3],\n       [2,1],\n       [1,2]],\n    columns=[\"A\", \"B\"]\n)\nnp.diff(tsdframe, axis=1)\n\nTime (s)      0\n----------  ---\n1             1\n2             1\n3             2\n4            -1\n5             1\ndtype: int64, shape: (5, 1)",
     "crumbs": [
       "Wrangling",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Numpy operations</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Numpy</span>"
     ]
   },
   {
@@ -123,7 +123,7 @@
     "href": "snippets/slicing.html",
     "title": "12  Slicing",
     "section": "",
-    "text": "import pynapple as nap\nepochs = nap.IntervalSet(\n    start=[1, 3, 7],\n    end=[2, 5, 9]\n)\nepochs\n\n  index    start    end\n      0        1      2\n      1        3      5\n      2        7      9\nshape: (3, 2), time unit: sec.",
+    "text": "import pynapple as nap\nimport numpy as np\ntsdframe = nap.TsdFrame(\n    t=[1,2,3,4,5], \n    d=[[1,2],\n       [1,2],\n       [1,3],\n       [2,1],\n       [1,2]],\n    columns=[\"A\", \"B\"]\n)\ntsdframe[:, 1]\n\nTime (s)\n----------  --\n1            2\n2            2\n3            3\n4            1\n5            2\ndtype: int64, shape: (5,)\n\n\n\n\nimport pynapple as nap\nimport numpy as np\ntsdframe = nap.TsdFrame(\n    t=[1,2,3,4,5], \n    d=[[1,2],\n       [1,2],\n       [1,3],\n       [2,1],\n       [1,2]],\n    columns=[\"A\", \"B\"]\n)\ntsdframe[2:4]\n\nTime (s)      A    B\n----------  ---  ---\n3             1    3\n4             2    1\ndtype: int64, shape: (2, 2)",
     "crumbs": [
       "Wrangling",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Slicing</span>"
@@ -134,7 +134,7 @@
     "href": "snippets/binning.html",
     "title": "13  Binning (count)",
     "section": "",
-    "text": "import pynapple as nap\nimport numpy as np\ndt = 0.001\ntimes = np.arange(0, 4, dt)\nrate = 40 * (1 + np.sin(2*np.pi*times)) / 2\nspikes = nap.Ts(times[np.random.rand(len(times)) &lt; rate * dt])\ncounts = spikes.count(0.1)\ncounts\n\nTime (s)\n-------------------  --\n0.07300000000000001   4\n0.173                 2\n0.273                 5\n0.373                 2\n0.473                 3\n0.5730000000000001    0\n0.673                 0\n...\n3.2729999999999997    5\n3.3729999999999998    4\n3.473                 2\n3.573                 1\n3.673                 0\n3.7729999999999997    0\n3.8729999999999998    0\ndtype: int64, shape: (39,)",
+    "text": "import pynapple as nap\nimport numpy as np\ndt = 0.001\ntimes = np.arange(0, 4, dt)\nrate = 40 * (1 + np.sin(2*np.pi*times)) / 2\nspikes = nap.Ts(times[np.random.rand(len(times)) &lt; rate * dt])\ncounts = spikes.count(0.1)\ncounts\n\nTime (s)\n------------------  --\n0.092                4\n0.192                5\n0.292                6\n0.392                0\n0.492                2\n0.5920000000000001   0\n0.6920000000000001   0\n...\n3.292               10\n3.392                2\n3.492                1\n3.5919999999999996   2\n3.6919999999999997   0\n3.792                0\n3.892                1\ndtype: int64, shape: (39,)",
     "crumbs": [
       "Core functions",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Binning (`count`)</span>"
@@ -145,7 +145,7 @@
     "href": "snippets/averaging.html",
     "title": "14  Averaging (bin_average)",
     "section": "",
-    "text": "import pynapple as nap\nimport numpy as np\ntimes = np.arange(0, 10, 0.01)\nsignal = np.sin(2 * np.pi * times) \nsignal += 0.2 * np.random.randn(len(times))\ntsd = nap.Tsd(t=times, d=signal)\naveraged = tsd.bin_average(0.2)\naveraged\n\nTime (s)\n-------------------  ----------\n0.1                   0.414235\n0.30000000000000004   0.906529\n0.5                   0.068329\n0.7                  -0.915047\n0.9                  -0.587246\n1.1                   0.405121\n1.3                   0.957122\n...\n8.7                  -0.863862\n8.9                  -0.587099\n9.1                   0.624378\n9.299999999999999     0.894488\n9.5                   0.0235118\n9.7                  -0.975877\n9.9                  -0.509235\ndtype: float64, shape: (50,)",
+    "text": "import pynapple as nap\nimport numpy as np\ntimes = np.arange(0, 10, 0.01)\nsignal = np.sin(2 * np.pi * times) \nsignal += 0.2 * np.random.randn(len(times))\ntsd = nap.Tsd(t=times, d=signal)\naveraged = tsd.bin_average(0.2)\naveraged\n\nTime (s)\n-------------------  ----------\n0.1                   0.524217\n0.30000000000000004   0.982935\n0.5                   0.0289416\n0.7                  -0.912102\n0.9                  -0.548875\n1.1                   0.533238\n1.3                   0.953607\n...\n8.7                  -0.933106\n8.9                  -0.558603\n9.1                   0.591151\n9.299999999999999     0.930417\n9.5                   0.0694045\n9.7                  -0.844079\n9.9                  -0.571314\ndtype: float64, shape: (50,)",
     "crumbs": [
       "Core functions",
       "<span class='chapter-number'>14</span>  <span class='chapter-title'>Averaging (`bin_average`)</span>"
@@ -156,131 +156,164 @@
     "href": "snippets/thresholding.html",
     "title": "15  Thresholding (threshold)",
     "section": "",
-    "text": "import pynapple as nap\nimport numpy as np\ntimes = np.arange(0, 10, 0.01)\nsignal = np.sin(2 * np.pi * times) \nsignal += 0.2 * np.random.randn(len(times))\ntsd = nap.Tsd(t=times, d=signal)\nabove = tsd.threshold(0.5, method=\"above\")\nbelow = tsd.threshold(-.5, method=\"below\")\nabove.time_support\n\nindex    start               end\n0        0.055               0.07500000000000001\n1        0.095               0.395\n2        0.405               0.41500000000000004\n3        0.435               0.445\n4        1.0750000000000002  1.1150000000000002\n5        1.125               1.3850000000000002\n6        1.395               1.415\n...      ...                 ...\n38       8.395               8.405000000000001\n39       8.415               8.434999999999999\n40       9.035               9.055\n41       9.065000000000001   9.094999999999999\n42       9.115               9.125\n43       9.135000000000002   9.405000000000001\n44       9.415               9.425\nshape: (45, 2), time unit: sec.",
+    "text": "import pynapple as nap\nimport numpy as np\ntimes = np.arange(0, 10, 0.01)\nsignal = np.sin(2 * np.pi * times) \nsignal += 0.2 * np.random.randn(len(times))\ntsd = nap.Tsd(t=times, d=signal)\nabove = tsd.threshold(0.5, method=\"above\")\nbelow = tsd.threshold(-.5, method=\"below\")\nabove.time_support\n\nindex    start                end\n0        0.025                0.035\n1        0.055                0.07500000000000001\n2        0.095                0.10500000000000001\n3        0.11499999999999999  0.135\n4        0.14500000000000002  0.375\n5        0.385                0.41500000000000004\n6        0.435                0.445\n...      ...                  ...\n48       8.434999999999999    8.445\n49       9.015                9.024999999999999\n50       9.035                9.045000000000002\n51       9.065000000000001    9.075\n52       9.085                9.295000000000002\n53       9.305                9.375\n54       9.385000000000002    9.405000000000001\nshape: (55, 2), time unit: sec.",
     "crumbs": [
       "Core functions",
       "<span class='chapter-number'>15</span>  <span class='chapter-title'>Thresholding (`threshold`)</span>"
     ]
   },
   {
+    "objectID": "snippets/smoothing.html",
+    "href": "snippets/smoothing.html",
+    "title": "16  Smoothing (smooth)",
+    "section": "",
+    "text": "import pynapple as nap\nimport numpy as np\ntimes = np.arange(0, 10, 0.01)\nsignal = np.sin(2 * np.pi * times) \nsignal += 0.2 * np.random.randn(len(times))\ntsd = nap.Tsd(t=times, d=signal)\nsmoothed = tsd.smooth(std=0.1)\nsmoothed\n\nTime (s)\n-----------------  ---------\n0.0                 0.1956\n0.01                0.222741\n0.02                0.251767\n0.03                0.282537\n0.04                0.31487\n0.05                0.348554\n0.06                0.383343\n...\n9.93               -0.468433\n9.94               -0.432692\n9.950000000000001  -0.397441\n9.96               -0.362975\n9.97               -0.329561\n9.98               -0.29744\n9.99               -0.266816\ndtype: float64, shape: (1000,)",
+    "crumbs": [
+      "Core functions",
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Smoothing (`smooth`)</span>"
+    ]
+  },
+  {
     "objectID": "snippets/tuning_curves.html",
     "href": "snippets/tuning_curves.html",
-    "title": "16  Tuning curves",
+    "title": "17  Tuning curves",
     "section": "",
     "text": "import pynapple as nap\nepochs = nap.IntervalSet(\n    start=[1, 3, 7],\n    end=[2, 5, 9]\n)\nepochs\n\n  index    start    end\n      0        1      2\n      1        3      5\n      2        7      9\nshape: (3, 2), time unit: sec.",
     "crumbs": [
       "Advanced functions",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Tuning curves</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Tuning curves</span>"
     ]
   },
   {
     "objectID": "snippets/correlogram.html",
     "href": "snippets/correlogram.html",
-    "title": "17  Correlograms",
+    "title": "18  Correlograms",
     "section": "",
-    "text": "import pynapple as nap\nepochs = nap.IntervalSet(\n    start=[1, 3, 7],\n    end=[2, 5, 9]\n)\nepochs\n\n  index    start    end\n      0        1      2\n      1        3      5\n      2        7      9\nshape: (3, 2), time unit: sec.",
+    "text": "18.1 Autocorrelograms",
     "crumbs": [
       "Advanced functions",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Correlograms</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Correlograms</span>"
+    ]
+  },
+  {
+    "objectID": "snippets/correlogram.html#autocorrelograms",
+    "href": "snippets/correlogram.html#autocorrelograms",
+    "title": "18  Correlograms",
+    "section": "",
+    "text": "import pynapple as nap\nimport numpy as np\ndt = 0.01\ntimes = np.arange(0, 4, dt)\nrate = 40 * (1 + np.sin(2*np.pi*times)) / 2\nunits = nap.TsGroup({\n    1: nap.Ts(times[np.random.rand(len(times)) &lt; rate * dt]),\n    2: nap.Ts(times[np.random.rand(len(times)) &lt; rate*2 * dt]),\n})\nautocorrelogram = nap.compute_autocorrelogram(\n    units, binsize=0.1, windowsize=1.0, norm=False\n)\nautocorrelogram\n\n\n\n\n\n\n\n\n1\n2\n\n\n\n\n-0.9\n22.077922\n44.478528\n\n\n-0.8\n18.961039\n39.325153\n\n\n-0.7\n12.337662\n28.220859\n\n\n-0.6\n8.311688\n19.141104\n\n\n-0.5\n8.831169\n15.828221\n\n\n-0.4\n11.298701\n19.754601\n\n\n-0.3\n15.844156\n30.306748\n\n\n-0.2\n19.870130\n45.276074\n\n\n-0.1\n27.532468\n58.588957\n\n\n0.0\n0.000000\n0.000000\n\n\n0.1\n27.402597\n58.834356\n\n\n0.2\n19.480519\n45.214724\n\n\n0.3\n15.454545\n30.490798\n\n\n0.4\n11.428571\n19.570552\n\n\n0.5\n8.311688\n15.582822\n\n\n0.6\n8.571429\n18.834356\n\n\n0.7\n11.948052\n27.791411\n\n\n0.8\n18.961039\n38.650307\n\n\n0.9\n21.948052\n44.294479",
+    "crumbs": [
+      "Advanced functions",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Correlograms</span>"
+    ]
+  },
+  {
+    "objectID": "snippets/correlogram.html#crosscorrelograms",
+    "href": "snippets/correlogram.html#crosscorrelograms",
+    "title": "18  Correlograms",
+    "section": "18.2 Crosscorrelograms",
+    "text": "18.2 Crosscorrelograms\n\n\n\ncrosscorrelogram = nap.compute_crosscorrelogram(\n    units, binsize=0.1, windowsize=1.0, norm=False\n)\ncrosscorrelogram\n\n\n\n\n\n\n\n\n1\n\n\n\n2\n\n\n\n\n-0.9\n51.428571\n\n\n-0.8\n43.246753\n\n\n-0.7\n32.987013\n\n\n-0.6\n21.038961\n\n\n-0.5\n15.324675\n\n\n-0.4\n20.389610\n\n\n-0.3\n27.272727\n\n\n-0.2\n42.597403\n\n\n-0.1\n54.805195\n\n\n0.0\n62.077922\n\n\n0.1\n58.961039\n\n\n0.2\n48.961039\n\n\n0.3\n37.012987\n\n\n0.4\n24.545455\n\n\n0.5\n14.935065\n\n\n0.6\n20.000000\n\n\n0.7\n27.012987\n\n\n0.8\n32.077922\n\n\n0.9\n42.467532",
+    "crumbs": [
+      "Advanced functions",
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Correlograms</span>"
     ]
   },
   {
     "objectID": "snippets/filtering.html",
     "href": "snippets/filtering.html",
-    "title": "18  Filtering",
+    "title": "19  Filtering",
     "section": "",
     "text": "import pynapple as nap\nepochs = nap.IntervalSet(\n    start=[1, 3, 7],\n    end=[2, 5, 9]\n)\nepochs\n\n  index    start    end\n      0        1      2\n      1        3      5\n      2        7      9\nshape: (3, 2), time unit: sec.",
     "crumbs": [
       "Advanced functions",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>Filtering</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Filtering</span>"
     ]
   },
   {
     "objectID": "snippets/perievent.html",
     "href": "snippets/perievent.html",
-    "title": "19  Perievent / STA",
+    "title": "20  Perievent / STA",
     "section": "",
     "text": "import pynapple as nap\nepochs = nap.IntervalSet(\n    start=[1, 3, 7],\n    end=[2, 5, 9]\n)\nepochs\n\n  index    start    end\n      0        1      2\n      1        3      5\n      2        7      9\nshape: (3, 2), time unit: sec.",
     "crumbs": [
       "Advanced functions",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Perievent / STA</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Perievent / STA</span>"
     ]
   },
   {
     "objectID": "snippets/decoding.html",
     "href": "snippets/decoding.html",
-    "title": "20  Decoding",
+    "title": "21  Decoding",
     "section": "",
     "text": "import pynapple as nap\nepochs = nap.IntervalSet(\n    start=[1, 3, 7],\n    end=[2, 5, 9]\n)\nepochs\n\n  index    start    end\n      0        1      2\n      1        3      5\n      2        7      9\nshape: (3, 2), time unit: sec.",
     "crumbs": [
       "Advanced functions",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>Decoding</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Decoding</span>"
     ]
   },
   {
     "objectID": "snippets/psd.html",
     "href": "snippets/psd.html",
-    "title": "21  Power-spectral density",
+    "title": "22  Power-spectral density",
     "section": "",
     "text": "import pynapple as nap\nepochs = nap.IntervalSet(\n    start=[1, 3, 7],\n    end=[2, 5, 9]\n)\nepochs\n\n  index    start    end\n      0        1      2\n      1        3      5\n      2        7      9\nshape: (3, 2), time unit: sec.",
     "crumbs": [
       "Advanced functions",
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>Power-spectral density</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Power-spectral density</span>"
     ]
   },
   {
     "objectID": "snippets/pynaviz.html",
     "href": "snippets/pynaviz.html",
-    "title": "22  Pynaviz",
+    "title": "23  Pynaviz",
     "section": "",
     "text": "import pynapple as nap\nepochs = nap.IntervalSet(\n    start=[1, 3, 7],\n    end=[2, 5, 9]\n)\nepochs\n\n  index    start    end\n      0        1      2\n      1        3      5\n      2        7      9\nshape: (3, 2), time unit: sec.",
     "crumbs": [
       "Integration with other packages",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>Pynaviz</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>Pynaviz</span>"
     ]
   },
   {
     "objectID": "snippets/nemos.html",
     "href": "snippets/nemos.html",
-    "title": "23  NeMoS",
+    "title": "24  NeMoS",
     "section": "",
     "text": "import pynapple as nap\nepochs = nap.IntervalSet(\n    start=[1, 3, 7],\n    end=[2, 5, 9]\n)\nepochs\n\n  index    start    end\n      0        1      2\n      1        3      5\n      2        7      9\nshape: (3, 2), time unit: sec.",
     "crumbs": [
       "Integration with other packages",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>NeMoS</span>"
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>NeMoS</span>"
     ]
   },
   {
     "objectID": "snippets/spikeinterface.html",
     "href": "snippets/spikeinterface.html",
-    "title": "24  SpikeInterface",
+    "title": "25  SpikeInterface",
     "section": "",
     "text": "import pynapple as nap\nepochs = nap.IntervalSet(\n    start=[1, 3, 7],\n    end=[2, 5, 9]\n)\nepochs\n\n  index    start    end\n      0        1      2\n      1        3      5\n      2        7      9\nshape: (3, 2), time unit: sec.",
     "crumbs": [
       "Integration with other packages",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>SpikeInterface</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>SpikeInterface</span>"
     ]
   },
   {
     "objectID": "snippets/loading.html",
     "href": "snippets/loading.html",
-    "title": "25  Loading data",
+    "title": "26  Loading data",
     "section": "",
     "text": "import pynapple as nap\nepochs = nap.IntervalSet(\n    start=[1, 3, 7],\n    end=[2, 5, 9]\n)\nepochs\n\n  index    start    end\n      0        1      2\n      1        3      5\n      2        7      9\nshape: (3, 2), time unit: sec.",
     "crumbs": [
       "Data",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Loading data</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Loading data</span>"
     ]
   },
   {
     "objectID": "snippets/streaming.html",
     "href": "snippets/streaming.html",
-    "title": "26  Streaming data",
+    "title": "27  Streaming data",
     "section": "",
     "text": "import pynapple as nap\nepochs = nap.IntervalSet(\n    start=[1, 3, 7],\n    end=[2, 5, 9]\n)\nepochs\n\n  index    start    end\n      0        1      2\n      1        3      5\n      2        7      9\nshape: (3, 2), time unit: sec.",
     "crumbs": [
       "Data",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>Streaming data</span>"
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>Streaming data</span>"
     ]
   }
 ]
