@@ -1,39 +1,50 @@
-## Loading data
-
+---
+title: Loading & saving
+toc: false
+---
 ```{python}
-#| echo: false
-import seaborn as sns
-
-custom_params = {"axes.spines.right": False, "axes.spines.top": False}
-sns.set_theme(style="ticks", rc=custom_params)
+#| include: false
+exec(open("../settings.py").read())
 ```
 
-::: {.columns}
-
-::: {.column width="40%"}
+## NWB
 ```{python}
+#| echo: false
+import os
+import requests
+nwb_path = 'A2929-200711.nwb'
 
+if nwb_path not in os.listdir("."):
+  r = requests.get(f"https://osf.io/fqht6/download", stream=True)
+  block_size = 1024*1024
+  with open(nwb_path, 'wb') as f:
+    for data in r.iter_content(block_size):
+        f.write(data)
+```
+```{python}
 import pynapple as nap
-epochs = nap.IntervalSet(
-    start=[1, 3, 7],
-    end=[2, 5, 9]
-)
-epochs
+nwb_path = 'A2929-200711.nwb'
+data = nap.load_file(nwb_path)
+data
 ```
-:::
 
-::: {.column width="60%"}
+
+## Raw data
+Raw data can be loaded with `pynapple` through the [NEO](https://neo.readthedocs.io/en/latest/) library.   
+Many formats are supported, [see here](https://neo.readthedocs.io/en/stable/rawiolist.html).
+```python
+import pynapple as nap
+data = nap.EphysReader("path/to/raw")
+```
+
+## Saving as `.npz`
+
 ```{python}
-#| echo: false
-
-import matplotlib.pyplot as plt
-fig, ax = plt.subplots(constrained_layout=True, figsize=(5,3))
-for start, stop in epochs.values:
-    ax.axvspan(start, stop)
-ax.set_xlabel("time (s)")
-plt.show()
+import pynapple as nap
+import numpy as np
+tsd = nap.Tsd(t=np.arange(10), d=np.arange(10))
+tsd.save("my_tsd.npz")
+loaded = nap.load_file("my_tsd.npz")
+loaded
 ```
-:::
-
-:::
 ---

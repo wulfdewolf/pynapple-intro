@@ -69,12 +69,10 @@ book:
         - snippets/smoothing.qmd
     - part: Advanced functions
       chapters:
-        - snippets/tuning_curves.qmd
         - snippets/correlogram.qmd
-        - snippets/filtering.qmd
+        - snippets/signal.qmd
         - snippets/perievent.qmd
-        - snippets/decoding.qmd
-        - snippets/psd.qmd
+        - snippets/tuning_curves.qmd
     - part: Integration with other packages
       chapters:
         - snippets/pynaviz.qmd

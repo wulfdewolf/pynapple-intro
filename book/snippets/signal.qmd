@@ -1,0 +1,94 @@
+---
+title: Signal processing
+toc: false
+---
+
+```{python}
+#| include: false
+exec(open("../settings.py").read())
+```
+
+## Simulated multi-frequency signal
+
+::: {.columns}
+
+::: {.column width="40%"}
+```{python}
+import pynapple as nap
+import numpy as np
+fs = 1000
+t = np.linspace(0, 2, fs * 2)
+f2 = np.cos(t*2*np.pi*2)
+f10 = np.cos(t*2*np.pi*10)
+f50 = np.cos(t*2*np.pi*50)
+
+tsd = nap.Tsd(t=t,d=f2+f10+f50 + np.random.normal(0, 0.5, len(t)))
+tsd
+```
+:::
+
+::: {.column width="60%"}
+```{python}
+#| echo: false
+
+import matplotlib.pyplot as plt
+fig, ax = plt.subplots(constrained_layout=True, figsize=(5,3))
+ax.plot(tsd)
+ax.set_ylabel("data (a.u.)")
+ax.set_xlabel("time (s)")
+plt.show()
+```
+:::
+:::
+
+## Bandpass filter
+::: {.columns}
+::: {.column width="40%"}
+```{python}
+filtered = nap.apply_bandpass_filter(
+    data=tsd, 
+    cutoff=(8, 12), 
+    fs=fs, 
+    mode='butter'
+)
+filtered
+```
+:::
+::: {.column width="60%"}
+```{python}
+#| echo: false
+
+import matplotlib.pyplot as plt
+fig, ax = plt.subplots(constrained_layout=True, figsize=(5,3))
+ax.plot(filtered)
+ax.set_ylabel("data (a.u.)")
+ax.set_xlabel("time (s)")
+plt.show()
+```
+:::
+:::
+
+## Power-spectral density
+::: {.columns}
+::: {.column width="40%"}
+```{python}
+psd = nap.compute_power_spectral_density(
+    tsd, 
+    fs=fs
+)
+psd
+```
+:::
+::: {.column width="60%"}
+```{python}
+#| echo: false
+
+import matplotlib.pyplot as plt
+fig, ax = plt.subplots(constrained_layout=True, figsize=(5,3))
+ax.plot(psd)
+ax.set_ylabel("power")
+ax.set_xlabel("frequency (Hz)")
+plt.show()
+```
+:::
+---

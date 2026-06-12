@@ -1,39 +1,21 @@
-## NeMoS
-
+---
+title: NeMoS
+toc: false
+---
 ```{python}
-#| echo: false
-import seaborn as sns
-
-custom_params = {"axes.spines.right": False, "axes.spines.top": False}
-sns.set_theme(style="ticks", rc=custom_params)
+#| include: false
+exec(open("../settings.py").read())
 ```
+![](https://raw.githubusercontent.com/flatironinstitute/nemos/main/docs/assets/glm_features_scheme.svg)
 
-::: {.columns}
+[NeMoS](https://nemos.readthedocs.io/en/latest/index.html) (Neural ModelS) is a statistical modeling framework optimized for systems neuroscience and powered by JAX.  
+It streamlines the process of defining and selecting models, through a collection of easy-to-use methods for feature design.
 
-::: {.column width="40%"}
-```{python}
+The core of `nemos` includes GPU-accelerated, well-tested implementations of standard statistical models, currently focusing on the Generalized Linear Model (GLM).  
+Check out [this page](https://nemos.readthedocs.io/en/latest/tutorials/README.html) for many examples of neural modelling using `nemos` and `pynapple`.
 
-import pynapple as nap
-epochs = nap.IntervalSet(
-    start=[1, 3, 7],
-    end=[2, 5, 9]
-)
-epochs
+To install it:
+```python
+pip install nemos
 ```
-:::
-
-::: {.column width="60%"}
-```{python}
-#| echo: false
-
-import matplotlib.pyplot as plt
-fig, ax = plt.subplots(constrained_layout=True, figsize=(5,3))
-for start, stop in epochs.values:
-    ax.axvspan(start, stop)
-ax.set_xlabel("time (s)")
-plt.show()
-```
-:::
-
-:::
 ---
