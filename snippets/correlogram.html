@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>18&nbsp; Correlograms – An introduction to Pynapple</title>
+<title>17&nbsp; Correlograms – An introduction to Pynapple</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -68,8 +68,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../snippets/filtering.html" rel="next">
-<link href="../snippets/tuning_curves.html" rel="prev">
+<link href="../snippets/signal.html" rel="next">
+<link href="../snippets/smoothing.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -112,7 +112,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
-<meta property="og:title" content="18&nbsp; Correlograms – An introduction to Pynapple">
+<meta property="og:title" content="17&nbsp; Correlograms – An introduction to Pynapple">
 <meta property="og:image" content="https://pynapple.org/snippets/correlogram_files/figure-html/cell-4-output-1.png">
 <meta property="og:site_name" content="An introduction to Pynapple">
 <meta property="og:image:height" content="872">
@@ -128,7 +128,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../snippets/tuning_curves.html">Advanced functions</a></li><li class="breadcrumb-item"><a href="../snippets/correlogram.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Correlograms</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../snippets/correlogram.html">Advanced functions</a></li><li class="breadcrumb-item"><a href="../snippets/correlogram.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Correlograms</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -308,38 +308,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../snippets/tuning_curves.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Tuning curves</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../snippets/correlogram.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Correlograms</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Correlograms</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../snippets/filtering.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Filtering</span></span></a>
+  <a href="../snippets/signal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Signal processing</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/perievent.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Perievent / STA</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Perievent</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../snippets/decoding.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Decoding</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../snippets/psd.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Power-spectral density</span></span></a>
+  <a href="../snippets/tuning_curves.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Tuning curves</span></span></a>
   </div>
 </li>
       </ul>
@@ -356,19 +344,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/pynaviz.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Pynaviz</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Pynaviz</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/nemos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">NeMoS</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">NeMoS</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/spikeinterface.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">SpikeInterface</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">SpikeInterface</span></span></a>
   </div>
 </li>
       </ul>
@@ -385,13 +373,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/loading.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Loading data</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Loading &amp; saving</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/streaming.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Streaming data</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Streaming from DANDI</span></span></a>
   </div>
 </li>
       </ul>
@@ -408,7 +396,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../project-ideas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Project ideas</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Project ideas</span></span></a>
   </div>
 </li>
       </ul>
@@ -422,9 +410,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content column-page-right" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../snippets/tuning_curves.html">Advanced functions</a></li><li class="breadcrumb-item"><a href="../snippets/correlogram.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Correlograms</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../snippets/correlogram.html">Advanced functions</a></li><li class="breadcrumb-item"><a href="../snippets/correlogram.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Correlograms</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Correlograms</span></h1>
+<h1 class="title"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Correlograms</span></h1>
 </div>
 
 
@@ -441,11 +429,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="autocorrelograms" class="level2" data-number="18.1">
-<h2 data-number="18.1" class="anchored" data-anchor-id="autocorrelograms"><span class="header-section-number">18.1</span> Autocorrelograms</h2>
+<section id="autocorrelograms" class="level2" data-number="17.1">
+<h2 data-number="17.1" class="anchored" data-anchor-id="autocorrelograms"><span class="header-section-number">17.1</span> Autocorrelograms</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
-<div id="b0b917e7" class="cell" data-execution_count="2">
+<div id="cf74d1d6" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pynapple <span class="im">as</span> nap</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> <span class="fl">0.01</span></span>
@@ -474,48 +462,48 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">-0.9</th>
-<td>22.077922</td>
-<td>44.478528</td>
+<td>20.000000</td>
+<td>46.875000</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">-0.8</th>
-<td>18.961039</td>
-<td>39.325153</td>
+<td>17.764706</td>
+<td>39.261364</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">-0.7</th>
-<td>12.337662</td>
-<td>28.220859</td>
+<td>13.411765</td>
+<td>28.352273</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">-0.6</th>
-<td>8.311688</td>
-<td>19.141104</td>
+<td>12.235294</td>
+<td>19.943182</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">-0.5</th>
-<td>8.831169</td>
-<td>15.828221</td>
+<td>10.235294</td>
+<td>17.272727</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">-0.4</th>
-<td>11.298701</td>
-<td>19.754601</td>
+<td>12.352941</td>
+<td>24.204545</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">-0.3</th>
-<td>15.844156</td>
-<td>30.306748</td>
+<td>20.000000</td>
+<td>35.397727</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">-0.2</th>
-<td>19.870130</td>
-<td>45.276074</td>
+<td>25.411765</td>
+<td>49.602273</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">-0.1</th>
-<td>27.532468</td>
-<td>58.588957</td>
+<td>29.529412</td>
+<td>61.136364</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">0.0</th>
@@ -524,48 +512,48 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">0.1</th>
-<td>27.402597</td>
-<td>58.834356</td>
+<td>31.058824</td>
+<td>61.306818</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">0.2</th>
-<td>19.480519</td>
-<td>45.214724</td>
+<td>24.000000</td>
+<td>49.602273</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">0.3</th>
-<td>15.454545</td>
-<td>30.490798</td>
+<td>19.411765</td>
+<td>34.943182</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">0.4</th>
-<td>11.428571</td>
-<td>19.570552</td>
+<td>12.470588</td>
+<td>23.920455</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">0.5</th>
-<td>8.311688</td>
-<td>15.582822</td>
+<td>10.000000</td>
+<td>17.102273</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">0.6</th>
-<td>8.571429</td>
-<td>18.834356</td>
+<td>11.882353</td>
+<td>19.602273</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">0.7</th>
-<td>11.948052</td>
-<td>27.791411</td>
+<td>13.529412</td>
+<td>27.727273</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">0.8</th>
-<td>18.961039</td>
-<td>38.650307</td>
+<td>17.647059</td>
+<td>38.806818</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">0.9</th>
-<td>21.948052</td>
-<td>44.294479</td>
+<td>19.882353</td>
+<td>46.818182</td>
 </tr>
 </tbody>
 </table>
@@ -574,7 +562,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div><div class="column" style="width:60%;">
-<div id="2ecbc430" class="cell" data-execution_count="3">
+<div id="fca111d5" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -587,11 +575,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <hr>
 </section>
-<section id="crosscorrelograms" class="level2" data-number="18.2">
-<h2 data-number="18.2" class="anchored" data-anchor-id="crosscorrelograms"><span class="header-section-number">18.2</span> Crosscorrelograms</h2>
+<section id="crosscorrelograms" class="level2" data-number="17.2">
+<h2 data-number="17.2" class="anchored" data-anchor-id="crosscorrelograms"><span class="header-section-number">17.2</span> Crosscorrelograms</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
-<div id="1e6210ab" class="cell" data-execution_count="4">
+<div id="817f7eef" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>crosscorrelogram <span class="op">=</span> nap.compute_crosscorrelogram(</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    units, binsize<span class="op">=</span><span class="fl">0.1</span>, windowsize<span class="op">=</span><span class="fl">1.0</span>, norm<span class="op">=</span><span class="va">False</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>)</span>
@@ -614,79 +602,79 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">-0.9</th>
-<td>51.428571</td>
+<td>51.176471</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">-0.8</th>
-<td>43.246753</td>
+<td>42.823529</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">-0.7</th>
-<td>32.987013</td>
+<td>32.117647</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">-0.6</th>
-<td>21.038961</td>
+<td>23.764706</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">-0.5</th>
-<td>15.324675</td>
+<td>17.882353</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">-0.4</th>
-<td>20.389610</td>
+<td>23.647059</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">-0.3</th>
-<td>27.272727</td>
+<td>35.882353</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">-0.2</th>
-<td>42.597403</td>
+<td>48.235294</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">-0.1</th>
-<td>54.805195</td>
+<td>57.764706</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">0.0</th>
-<td>62.077922</td>
+<td>66.000000</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">0.1</th>
-<td>58.961039</td>
+<td>63.058824</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">0.2</th>
-<td>48.961039</td>
+<td>53.058824</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">0.3</th>
-<td>37.012987</td>
+<td>38.588235</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">0.4</th>
-<td>24.545455</td>
+<td>28.941176</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">0.5</th>
-<td>14.935065</td>
+<td>22.000000</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">0.6</th>
-<td>20.000000</td>
+<td>22.117647</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">0.7</th>
-<td>27.012987</td>
+<td>27.882353</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">0.8</th>
-<td>32.077922</td>
+<td>34.000000</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">0.9</th>
-<td>42.467532</td>
+<td>39.647059</td>
 </tr>
 </tbody>
 </table>
@@ -695,7 +683,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div><div class="column" style="width:60%;">
-<div id="36adb4a7" class="cell" data-execution_count="5">
+<div id="f5564fe5" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -1113,13 +1101,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <nav class="page-navigation column-page-right">
   <div class="nav-page nav-page-previous">
-      <a href="../snippets/tuning_curves.html" class="pagination-link" aria-label="Tuning curves">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Tuning curves</span></span>
+      <a href="../snippets/smoothing.html" class="pagination-link" aria-label="Smoothing (`smooth`)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Smoothing (<code>smooth</code>)</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../snippets/filtering.html" class="pagination-link" aria-label="Filtering">
-        <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Filtering</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../snippets/signal.html" class="pagination-link" aria-label="Signal processing">
+        <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Signal processing</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
