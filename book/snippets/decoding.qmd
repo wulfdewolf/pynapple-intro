@@ -1,5 +1,4 @@
 ---
-title: Decoding
 toc: false
 ---
 
@@ -7,6 +6,7 @@ toc: false
 #| include: false
 exec(open("../settings.py").read())
 ```
+# Decoding {#sec-decoding}
 
 ## Simulated head direction cells
 

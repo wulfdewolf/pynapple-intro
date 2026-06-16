@@ -7,7 +7,7 @@ toc: false
 exec(open("settings.py").read())
 exec(open("load_dandiset.py").read())
 ```
-# Analysing head direction cells over multiple epochs {.unnumbered}
+# Analysing head direction cells over multiple epochs {.unnumbered #sec-beginner}
 
 The goal of this project is to apply fundamental `pynapple` 
 operations to data recorded from head direction cells.

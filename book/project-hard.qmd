@@ -7,4 +7,11 @@ toc: false
 exec(open("settings.py").read())
 exec(open("load_dandiset.py").read())
 ```
-# Decoding head direction from head direction cells {.unnumbered}
+The Pynapple website contains [various examples](https://pynapple.org/examples.html) that start from real data and show you 
+how to perform some typical neuroscience analyses.
+
+Pick one and see if you can reproduce it:
+
+- [Null distributions to test spatial firing](https://pynapple.org/examples/tutorial_null_distributions.html)
+- [Detecting sharp-wave ripples](https://pynapple.org/examples/tutorial_ripple_detection.html)
+- [Analyzing calcium imaging data](https://pynapple.org/examples/tutorial_calcium_imaging.html)

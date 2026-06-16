@@ -8,3 +8,9 @@ exec(open("settings.py").read())
 exec(open("load_dandiset.py").read())
 ```
 # Decoding head direction from head direction cells {.unnumbered}
+
+If you managed to compute head direction tuning curves in @sec-beginner, 
+you can now test whether you can use them to decode head direction 
+from the population of head direction cells.
+
+Good places to look for help are @sec-decoding and the [Pynapple user guide on decoding](https://pynapple.org/user_guide/07_decoding.html).  
