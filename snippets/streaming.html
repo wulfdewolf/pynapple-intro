@@ -68,7 +68,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../project-ideas.html" rel="next">
+<link href="../project-beginner.html" rel="next">
 <link href="../snippets/loading.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -390,8 +390,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../project-ideas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Project ideas</span></span></a>
+  <a href="../project-beginner.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Project level: beginner</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project-intermediate.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Project level: intermediate</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project-hard.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Project level: hard</span></span></a>
   </div>
 </li>
       </ul>
@@ -407,7 +419,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../snippets/loading.html">Data</a></li><li class="breadcrumb-item"><a href="../snippets/streaming.html"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Streaming from DANDI</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Streaming from DANDI</span></h1>
+<h1 class="title"><span id="sec-streaming" class="quarto-section-identifier"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Streaming from DANDI</span></span></h1>
 </div>
 
 
@@ -428,14 +440,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>First, we have to install the <code>dandi</code> package:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pip install dandi</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>To start streaming, find the dandiset you are interested in, including the specific file:</p>
-<div id="ee10e68d" class="cell" data-execution_count="2">
+<div id="6a968fc1" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>dandiset_id, filepath <span class="op">=</span> (</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"000582"</span>,</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"sub-10073/sub-10073_ses-17010302_behavior+ecephys.nwb"</span>,</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"000939"</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"sub-A3702/sub-A3702_ses-191126_behavior+ecephys.nwb"</span>,</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>The following function will then stream the data directly into <code>pynapple</code>:</p>
-<div id="f02d8ede" class="cell" data-execution_count="3">
+<div id="4ce77ddf" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pynapple <span class="im">as</span> nap</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pynwb <span class="im">import</span> NWBHDF5IO</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dandi.dandiapi <span class="im">import</span> DandiAPIClient</span>
@@ -464,19 +476,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> nap.NWBFile(io.read())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Let’s call it:</p>
-<div id="faeaf981" class="cell" data-execution_count="4">
+<div id="96b47e3c" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>nwbfile <span class="op">=</span> stream_dandiset(dandiset_id, filepath)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>nwbfile</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
-<pre><code>17010302
-┍━━━━━━━━━━━━━━━━━━━━━┯━━━━━━━━━━┑
-│ Keys                │ Type     │
-┝━━━━━━━━━━━━━━━━━━━━━┿━━━━━━━━━━┥
-│ units               │ TsGroup  │
-│ ElectricalSeriesLFP │ Tsd      │
-│ SpatialSeriesLED1   │ TsdFrame │
-│ ElectricalSeries    │ Tsd      │
-┕━━━━━━━━━━━━━━━━━━━━━┷━━━━━━━━━━┙</code></pre>
+<pre><code>191126
+┍━━━━━━━━━━━━━━━━━━┯━━━━━━━━━━━━━┑
+│ Keys             │ Type        │
+┝━━━━━━━━━━━━━━━━━━┿━━━━━━━━━━━━━┥
+│ units            │ TsGroup     │
+│ sleep_states     │ IntervalSet │
+│ epochs           │ IntervalSet │
+│ pseudoEMG        │ Tsd         │
+│ LFP              │ TsdFrame    │
+│ position         │ TsdFrame    │
+│ head-direction   │ Tsd         │
+│ Accelerometer    │ TsdFrame    │
+│ ElectricalSeries │ TsdFrame    │
+┕━━━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━┙</code></pre>
 </div>
 </div>
 <hr>
@@ -891,8 +908,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../project-ideas.html" class="pagination-link" aria-label="Project ideas">
-        <span class="nav-page-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Project ideas</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../project-beginner.html" class="pagination-link" aria-label="Project level: beginner">
+        <span class="nav-page-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Project level: beginner</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -392,8 +392,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../project-ideas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Project ideas</span></span></a>
+  <a href="../project-beginner.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Project level: beginner</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project-intermediate.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Project level: intermediate</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project-hard.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Project level: hard</span></span></a>
   </div>
 </li>
       </ul>
@@ -430,7 +442,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="19.1" class="anchored" data-anchor-id="simulated-spiking-unit"><span class="header-section-number">19.1</span> Simulated spiking unit</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
-<div id="a1d9bb80" class="cell" data-execution_count="2">
+<div id="6a940ec2" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pynapple <span class="im">as</span> nap</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>stimuli <span class="op">=</span> nap.Ts(t<span class="op">=</span>np.arange(<span class="dv">0</span>, <span class="dv">1000</span>, <span class="dv">1</span>), time_units<span class="op">=</span><span class="st">"s"</span>)</span>
@@ -446,26 +458,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>ts</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>Time (s)
-0.054502349398811385
-0.11297424345477279
-0.1877771810178414
-1.0298893243403695
-1.0723979785131057
-1.0874742674840738
-2.02951433429868
+0.04120472899435307
+0.08266281782268514
+0.08664578169568322
+1.100682961451839
+1.1410904099947292
+1.176219421488087
+2.106631665358904
 ...
-997.2002241697452
-998.0537396194006
-998.1154224597851
-998.168146185391
-999.009515642904
-999.0105263703736
-999.0651567361956
+998.0432999687376
+998.0641842480749
+998.0833036679163
+998.1708152321507
+999.1157153584272
+999.168605071598
+999.2224992423347
 shape: 3500</code></pre>
 </div>
 </div>
 </div><div class="column" style="width:60%;">
-<div id="021fb1a6" class="cell" data-execution_count="3">
+<div id="c41896c1" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -481,7 +493,7 @@ shape: 3500</code></pre>
 <h2 data-number="19.2" class="anchored" data-anchor-id="peri-event-time-histograms-peth"><span class="header-section-number">19.2</span> Peri-Event Time Histograms (PETH)</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
-<div id="5527f33a" class="cell" data-execution_count="4">
+<div id="bd04a495" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>peth <span class="op">=</span> nap.compute_perievent(</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>ts, </span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    events<span class="op">=</span>stimuli, </span>
@@ -492,22 +504,22 @@ shape: 3500</code></pre>
 -------  ------  --------
 0        6.0     1.0
 1        6.0     2.0
-2        6.0     3.0
+2        8.0     3.0
 3        6.0     4.0
 4        6.0     5.0
 5        6.0     6.0
-6        8.0     7.0
+6        6.0     7.0
 ...      ...     ...
 992      6.0     993.0
-993      8.0     994.0
+993      6.0     994.0
 994      6.0     995.0
-995      6.0     996.0
+995      8.0     996.0
 996      6.0     997.0
-997      6.0     998.0
+997      8.0     998.0
 998      6.0     999.0</code></pre>
 </div>
 </div>
-<div id="9c02d5af" class="cell" data-execution_count="5">
+<div id="5c396a8b" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>bin_size <span class="op">=</span> <span class="fl">0.01</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>peth_counts <span class="op">=</span> peth.count(bin_size)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>peth_counts</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -535,7 +547,7 @@ dtype: int64, shape: (50, 999)</code></pre>
 </div>
 </div>
 </div><div class="column" style="width:60%;">
-<div id="c844e0a8" class="cell" data-execution_count="6">
+<div id="5fee9685" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
