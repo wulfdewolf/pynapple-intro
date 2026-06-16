@@ -84,7 +84,9 @@ book:
         - snippets/streaming.qmd
     - part: Your turn
       chapters:
-        - project-ideas.qmd
+        - project-beginner.qmd
+        - project-intermediate.qmd
+        - project-hard.qmd
 
 format:
   html:

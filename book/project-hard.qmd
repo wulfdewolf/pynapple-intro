@@ -1,0 +1,10 @@
+---
+title: "Project level: hard"
+toc: false
+---
+```{python}
+#| include: false
+exec(open("settings.py").read())
+exec(open("load_dandiset.py").read())
+```
+# Decoding head direction from head direction cells {.unnumbered}

@@ -1,0 +1,71 @@
+---
+title: "Project level: beginner"
+toc: false
+---
+```{python}
+#| include: false
+exec(open("settings.py").read())
+exec(open("load_dandiset.py").read())
+```
+# Analysing head direction cells over multiple epochs {.unnumbered}
+
+The goal of this project is to apply fundamental `pynapple` 
+operations to data recorded from head direction cells.
+
+## Extract the head direction cells
+If you managed to spike-sort your own, go ahead and use the `TsGroup` you created earlier.  
+If not, extract the units from the NWB file you streamed in @sec-streaming.  
+You can find the `TsGroup` in the NWB file as follows:
+```{python}
+units = nwbfile["units"]
+print(units)
+```
+You should notice a column called `is_head_direction`, containing values 0 or 1.  
+That column indicates whether the cell is modulated by head direction or not.  
+Subset the `TsGroup` to extract the head direction cells as follows:
+```{python}
+hd_cells = units[units["is_head_direction"] == 1]
+print(hd_cells)
+```
+
+## Extract the head direction
+Next, let's get the behaviour.  
+The NWB file has an entry called `head-direction`:
+```{python}
+hd = nwbfile["head-direction"].dropna()
+print(hd)
+```
+Sometimes data will contain missing values, for easier processing downstream it is best to drop those using `.dropna()`.
+
+## Extract the epochs
+```{python}
+epochs = nwbfile["epochs"]
+print(epochs)
+```
+
+## Compute head direction tuning curves
+Now that we have all the components, see if you can figure out how to compute head direction tuning curves.  
+Good places to look for help are @sec-tcs and the [Pynapple user guide on tuning curves](https://pynapple.org/user_guide/06_tuning_curves.html).  
+You might want to consider how many bins to use and over which epochs to compute the tuning curves!
+
+```{python}
+#| include: false
+tuning_curves = nap.compute_tuning_curves(
+    data=hd_cells, 
+    features=hd, 
+    epochs=epochs[epochs["tags"] == "wake_square"], 
+    bins=60,
+    feature_names=["head direction (rad)"]
+)
+```
+
+If all goes well, you should be able to select a couple units and make a plot that looks like this:
+
+```{python}
+import matplotlib.pyplot as plt
+selection = tuning_curves.sel(unit=[1,2,3])
+plt.plot(selection.T)
+plt.xlabel("head direction (rad)")
+plt.ylabel("firing rate (Hz)");
+```
+
