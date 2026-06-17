@@ -61,4 +61,4 @@ tuning_curves.plot.line(x="feature", add_legend=False)
 plt.ylabel("firing rate [Hz]")
 plt.show()
 ```
----
+--

@@ -9,7 +9,7 @@ exec(open("load_dandiset.py").read())
 ```
 # Decoding head direction from head direction cells {.unnumbered}
 
-If you managed to compute head direction tuning curves in @sec-beginner, 
+If you managed to compute head direction tuning curves in the beginner project,
 you can now test whether you can use them to decode head direction 
 from the population of head direction cells.
 

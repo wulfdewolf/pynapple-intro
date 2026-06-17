@@ -15,3 +15,5 @@ Pick one and see if you can reproduce it:
 - [Null distributions to test spatial firing](https://pynapple.org/examples/tutorial_null_distributions.html)
 - [Detecting sharp-wave ripples](https://pynapple.org/examples/tutorial_ripple_detection.html)
 - [Analyzing calcium imaging data](https://pynapple.org/examples/tutorial_calcium_imaging.html)
+
+If you have your own data, feel free to come and ask me for help analysing it!

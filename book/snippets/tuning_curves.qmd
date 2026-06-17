@@ -75,7 +75,7 @@ plt.show()
 :::
 :::
 
-## Decoding
+## Decoding {#sec-decoding}
 ::: {.columns}
 ::: {.column width="50%"}
 ```{python}
