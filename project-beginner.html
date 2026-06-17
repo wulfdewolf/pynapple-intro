@@ -447,7 +447,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>If you managed to spike-sort your own, go ahead and use the <code>TsGroup</code> you created earlier.<br>
 If not, extract the units from the NWB file you streamed in <a href="snippets/streaming.html" class="quarto-xref"><span>Chapter 25</span></a>.<br>
 You can find the <code>TsGroup</code> in the NWB file as follows:</p>
-<div id="8fb72879" class="cell" data-execution_count="2">
+<div id="88ad3962" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>units <span class="op">=</span> nwbfile[<span class="st">"units"</span>]</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(units)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -548,7 +548,7 @@ You can find the <code>TsGroup</code> in the NWB file as follows:</p>
 <p>You should notice a column called <code>is_head_direction</code>, containing values 0 or 1.<br>
 That column indicates whether the cell is modulated by head direction or not.<br>
 Subset the <code>TsGroup</code> to extract the head direction cells as follows:</p>
-<div id="baf201e3" class="cell" data-execution_count="3">
+<div id="04916bc9" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>hd_cells <span class="op">=</span> units[units[<span class="st">"is_head_direction"</span>] <span class="op">==</span> <span class="dv">1</span>]</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(hd_cells)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -622,7 +622,7 @@ Subset the <code>TsGroup</code> to extract the head direction cells as follows:<
 <h2 data-number="26.2" class="anchored" data-anchor-id="extract-the-head-direction"><span class="header-section-number">26.2</span> Extract the head direction</h2>
 <p>Next, let’s get the behaviour.<br>
 The NWB file has an entry called <code>head-direction</code>:</p>
-<div id="1d75dd85" class="cell" data-execution_count="4">
+<div id="506bd087" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>hd <span class="op">=</span> nwbfile[<span class="st">"head-direction"</span>].dropna()</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(hd)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -650,7 +650,7 @@ dtype: float64, shape: (493102,)</code></pre>
 </section>
 <section id="extract-the-epochs" class="level2" data-number="26.3">
 <h2 data-number="26.3" class="anchored" data-anchor-id="extract-the-epochs"><span class="header-section-number">26.3</span> Extract the epochs</h2>
-<div id="d2bf2483" class="cell" data-execution_count="5">
+<div id="3c3c0ba6" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>epochs <span class="op">=</span> nwbfile[<span class="st">"epochs"</span>]</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(epochs)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -673,7 +673,7 @@ shape: (4, 2), time unit: sec.</code></pre>
 Good places to look for help are <a href="snippets/tuning_curves.html" class="quarto-xref"><span>Chapter 20</span></a> and the <a href="https://pynapple.org/user_guide/06_tuning_curves.html">Pynapple user guide on tuning curves</a>.<br>
 You might want to consider how many bins to use and over which epochs to compute the tuning curves!</p>
 <p>If all goes well, you should be able to select a couple units and make a plot that looks like this:</p>
-<div id="65152883" class="cell" data-execution_count="7">
+<div id="95dbdeb0" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>selection <span class="op">=</span> tuning_curves.sel(unit<span class="op">=</span>[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>])</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>plt.plot(selection.T)</span>
