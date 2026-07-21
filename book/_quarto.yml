@@ -45,6 +45,7 @@ book:
   chapters:
     - index.qmd
     - origins.qmd
+    - goal.qmd
     - part: Pynapple fundamentals
       chapters:
         - snippets/ts.qmd

@@ -1,0 +1,78 @@
+---
+title: Goal
+---
+
+<div class="timeline-horizontal">
+
+<div class="timeline-entries-horizontal">
+
+<div class="timeline-entry">
+  <b>Recording</b><br>
+  <img src="assets/rat.png" width="50%">
+</div>
+
+<div class="timeline-entry">
+  <b>Preprocessing</b><br>
+  segmenting (`calman`)<br>
+  spike-sorting (`spikeinterface`)
+</div>
+
+<div class="timeline-entry logo">
+  <img src="assets/logo.png" width="60%">
+</div>
+
+<div class="timeline-entry">
+  <b>Postprocessing</b><br>
+  model fitting (`nemos`)<br>
+  interpretation (`you`)
+</div>
+
+</div>
+
+<div class="timeline-arrow"></div>
+
+</div>
+
+<style>
+.timeline-horizontal {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.timeline-arrow {
+  position: relative;
+  width: 90%;
+  height: 6px;
+  background: currentColor;
+  margin: 1em auto 0;
+}
+
+.timeline-arrow::after {
+  content: "";
+  position: absolute;
+  right: -6px;
+  top: -9px;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 18px solid currentColor;
+}
+
+.timeline-entries-horizontal {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.5fr 1fr;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto 1em;
+}
+
+.timeline-entry {
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.logo {
+  margin: 0 1em;
+}
+</style>
