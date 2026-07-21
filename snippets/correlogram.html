@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>17&nbsp; Correlograms – An introduction to Pynapple</title>
+<title>18&nbsp; Correlograms – An introduction to Pynapple</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -79,7 +79,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-eb09723893e50cc6ed3831d1ccca8717.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-5bfb5dc14fe71dea044e433a7449a6c9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -112,7 +112,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
-<meta property="og:title" content="17&nbsp; Correlograms – An introduction to Pynapple">
+<meta property="og:title" content="18&nbsp; Correlograms – An introduction to Pynapple">
 <meta property="og:image" content="https://pynapple.org/snippets/correlogram_files/figure-html/cell-4-output-1.png">
 <meta property="og:site_name" content="An introduction to Pynapple">
 <meta property="og:image:height" content="872">
@@ -128,7 +128,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../snippets/correlogram.html">Advanced functions</a></li><li class="breadcrumb-item"><a href="../snippets/correlogram.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Correlograms</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../snippets/correlogram.html">Advanced functions</a></li><li class="breadcrumb-item"><a href="../snippets/correlogram.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Correlograms</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -169,6 +169,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Origins</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../goal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Goal</span></span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -181,31 +187,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/ts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Time series (<code>Ts</code>)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Time series (<code>Ts</code>)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/tsgroup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Multiple time series (<code>TsGroup</code>)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Multiple time series (<code>TsGroup</code>)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/tsd.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Time series with data (<code>Tsd</code>)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Time series with data (<code>Tsd</code>)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/tsdframe.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Time series with multiple data columns (<code>TsdFrame</code>)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Time series with multiple data columns (<code>TsdFrame</code>)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/intervalset.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Intervals (<code>IntervalSet</code>)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Intervals (<code>IntervalSet</code>)</span></span></a>
   </div>
 </li>
       </ul>
@@ -222,19 +228,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/timesupport.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Time supports (<code>time_support</code>)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Time supports (<code>time_support</code>)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/restrict.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Restricting time series (<code>restrict</code>)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Restricting time series (<code>restrict</code>)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/value_from.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Taking values (<code>value_from</code>)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Taking values (<code>value_from</code>)</span></span></a>
   </div>
 </li>
       </ul>
@@ -251,13 +257,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/numpy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Numpy</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Numpy</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/slicing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Slicing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Slicing</span></span></a>
   </div>
 </li>
       </ul>
@@ -274,25 +280,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/binning.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Binning (<code>count</code>)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Binning (<code>count</code>)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/averaging.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Averaging (<code>bin_average</code>)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Averaging (<code>bin_average</code>)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/thresholding.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Thresholding (<code>threshold</code>)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Thresholding (<code>threshold</code>)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/smoothing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Smoothing (<code>smooth</code>)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Smoothing (<code>smooth</code>)</span></span></a>
   </div>
 </li>
       </ul>
@@ -309,25 +315,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/correlogram.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Correlograms</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Correlograms</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/signal.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Signal processing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Signal processing</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/perievent.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Perievent</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Perievent</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/tuning_curves.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Tuning curves</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Tuning curves</span></span></a>
   </div>
 </li>
       </ul>
@@ -344,19 +350,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/pynaviz.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Pynaviz</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Pynaviz</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/nemos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">NeMoS</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">NeMoS</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/spikeinterface.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">SpikeInterface</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">SpikeInterface</span></span></a>
   </div>
 </li>
       </ul>
@@ -373,13 +379,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/loading.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Loading &amp; saving</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Loading &amp; saving</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/streaming.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Streaming from DANDI</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Streaming from DANDI</span></span></a>
   </div>
 </li>
       </ul>
@@ -396,19 +402,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../project-beginner.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Project level: beginner</span></span></a>
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Project level: beginner</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../project-intermediate.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Project level: intermediate</span></span></a>
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Project level: intermediate</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../project-hard.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Project level: hard</span></span></a>
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Project level: hard</span></span></a>
   </div>
 </li>
       </ul>
@@ -422,9 +428,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content column-page-right" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../snippets/correlogram.html">Advanced functions</a></li><li class="breadcrumb-item"><a href="../snippets/correlogram.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Correlograms</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../snippets/correlogram.html">Advanced functions</a></li><li class="breadcrumb-item"><a href="../snippets/correlogram.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Correlograms</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Correlograms</span></h1>
+<h1 class="title"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Correlograms</span></h1>
 </div>
 
 
@@ -441,11 +447,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="autocorrelograms" class="level2" data-number="17.1">
-<h2 data-number="17.1" class="anchored" data-anchor-id="autocorrelograms"><span class="header-section-number">17.1</span> Autocorrelograms</h2>
+<section id="autocorrelograms" class="level2" data-number="18.1">
+<h2 data-number="18.1" class="anchored" data-anchor-id="autocorrelograms"><span class="header-section-number">18.1</span> Autocorrelograms</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
-<div id="9b38c170" class="cell" data-execution_count="2">
+<div id="d943224c" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pynapple <span class="im">as</span> nap</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>dt <span class="op">=</span> <span class="fl">0.01</span></span>
@@ -474,48 +480,48 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">-0.9</th>
-<td>15.217391</td>
-<td>44.424242</td>
+<td>16.753247</td>
+<td>44.255319</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">-0.8</th>
-<td>12.463768</td>
-<td>39.696970</td>
+<td>14.805195</td>
+<td>35.886525</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">-0.7</th>
-<td>12.753623</td>
-<td>30.060606</td>
+<td>14.025974</td>
+<td>24.042553</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">-0.6</th>
-<td>10.869565</td>
-<td>21.818182</td>
+<td>9.350649</td>
+<td>14.609929</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">-0.5</th>
-<td>7.101449</td>
-<td>17.393939</td>
+<td>7.662338</td>
+<td>10.638298</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">-0.4</th>
-<td>8.405797</td>
-<td>24.242424</td>
+<td>12.207792</td>
+<td>15.177305</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">-0.3</th>
-<td>13.478261</td>
-<td>34.181818</td>
+<td>14.675325</td>
+<td>26.879433</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">-0.2</th>
-<td>18.695652</td>
-<td>44.545455</td>
+<td>22.987013</td>
+<td>41.702128</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">-0.1</th>
-<td>25.072464</td>
-<td>55.818182</td>
+<td>26.233766</td>
+<td>54.539007</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">0.0</th>
@@ -524,48 +530,48 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">0.1</th>
-<td>25.507246</td>
-<td>55.636364</td>
+<td>26.753247</td>
+<td>54.468085</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">0.2</th>
-<td>18.115942</td>
-<td>44.666667</td>
+<td>22.987013</td>
+<td>40.992908</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">0.3</th>
-<td>13.913043</td>
-<td>33.636364</td>
+<td>15.584416</td>
+<td>26.382979</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">0.4</th>
-<td>8.695652</td>
-<td>23.939394</td>
+<td>12.337662</td>
+<td>14.964539</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">0.5</th>
-<td>6.666667</td>
-<td>17.818182</td>
+<td>7.272727</td>
+<td>10.638298</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">0.6</th>
-<td>10.579710</td>
-<td>21.272727</td>
+<td>9.220779</td>
+<td>14.539007</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">0.7</th>
-<td>12.608696</td>
-<td>29.636364</td>
+<td>14.025974</td>
+<td>23.687943</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">0.8</th>
-<td>12.173913</td>
-<td>39.333333</td>
+<td>14.155844</td>
+<td>35.248227</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">0.9</th>
-<td>15.217391</td>
-<td>44.606061</td>
+<td>16.753247</td>
+<td>44.184397</td>
 </tr>
 </tbody>
 </table>
@@ -574,7 +580,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div><div class="column" style="width:60%;">
-<div id="415dcfef" class="cell" data-execution_count="3">
+<div id="225e681b" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -587,11 +593,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <hr>
 </section>
-<section id="crosscorrelograms" class="level2" data-number="17.2">
-<h2 data-number="17.2" class="anchored" data-anchor-id="crosscorrelograms"><span class="header-section-number">17.2</span> Crosscorrelograms</h2>
+<section id="crosscorrelograms" class="level2" data-number="18.2">
+<h2 data-number="18.2" class="anchored" data-anchor-id="crosscorrelograms"><span class="header-section-number">18.2</span> Crosscorrelograms</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
-<div id="4ddef847" class="cell" data-execution_count="4">
+<div id="bb6d447a" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>crosscorrelogram <span class="op">=</span> nap.compute_crosscorrelogram(</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    units, binsize<span class="op">=</span><span class="fl">0.1</span>, windowsize<span class="op">=</span><span class="fl">1.0</span>, norm<span class="op">=</span><span class="va">False</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>)</span>
@@ -614,79 +620,79 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">-0.9</th>
-<td>47.826087</td>
+<td>31.298701</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">-0.8</th>
-<td>45.217391</td>
+<td>25.584416</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">-0.7</th>
-<td>33.478261</td>
+<td>18.571429</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">-0.6</th>
-<td>23.768116</td>
+<td>13.376623</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">-0.5</th>
-<td>17.246377</td>
+<td>12.987013</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">-0.4</th>
-<td>16.666667</td>
+<td>20.259740</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">-0.3</th>
-<td>29.710145</td>
+<td>30.259740</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">-0.2</th>
-<td>40.434783</td>
+<td>41.818182</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">-0.1</th>
-<td>51.304348</td>
+<td>52.727273</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">0.0</th>
-<td>59.565217</td>
+<td>52.337662</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">0.1</th>
-<td>61.014493</td>
+<td>47.662338</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">0.2</th>
-<td>53.478261</td>
+<td>34.675325</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">0.3</th>
-<td>40.434783</td>
+<td>23.246753</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">0.4</th>
-<td>29.855072</td>
+<td>15.064935</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">0.5</th>
-<td>19.420290</td>
+<td>16.493506</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">0.6</th>
-<td>15.942029</td>
+<td>18.961039</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">0.7</th>
-<td>20.000000</td>
+<td>28.961039</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">0.8</th>
-<td>33.333333</td>
+<td>35.064935</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">0.9</th>
-<td>43.768116</td>
+<td>44.805195</td>
 </tr>
 </tbody>
 </table>
@@ -695,7 +701,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div><div class="column" style="width:60%;">
-<div id="ce94ed0d" class="cell" data-execution_count="5">
+<div id="b7d88102" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -1114,12 +1120,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <nav class="page-navigation column-page-right">
   <div class="nav-page nav-page-previous">
       <a href="../snippets/smoothing.html" class="pagination-link" aria-label="Smoothing (`smooth`)">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Smoothing (<code>smooth</code>)</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Smoothing (<code>smooth</code>)</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../snippets/signal.html" class="pagination-link" aria-label="Signal processing">
-        <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Signal processing</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Signal processing</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

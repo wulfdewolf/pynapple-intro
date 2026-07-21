@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>20&nbsp; Tuning curves – An introduction to Pynapple</title>
+<title>21&nbsp; Tuning curves – An introduction to Pynapple</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -79,7 +79,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-eb09723893e50cc6ed3831d1ccca8717.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-5bfb5dc14fe71dea044e433a7449a6c9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -112,7 +112,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
-<meta property="og:title" content="20&nbsp; Tuning curves – An introduction to Pynapple">
+<meta property="og:title" content="21&nbsp; Tuning curves – An introduction to Pynapple">
 <meta property="og:image" content="https://pynapple.org/snippets/tuning_curves_files/figure-html/cell-6-output-1.png">
 <meta property="og:site_name" content="An introduction to Pynapple">
 <meta property="og:image:height" content="872">
@@ -128,7 +128,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../snippets/correlogram.html">Advanced functions</a></li><li class="breadcrumb-item"><a href="../snippets/tuning_curves.html"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Tuning curves</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../snippets/correlogram.html">Advanced functions</a></li><li class="breadcrumb-item"><a href="../snippets/tuning_curves.html"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Tuning curves</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -169,6 +169,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Origins</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../goal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Goal</span></span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -181,31 +187,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/ts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Time series (<code>Ts</code>)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Time series (<code>Ts</code>)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/tsgroup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Multiple time series (<code>TsGroup</code>)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Multiple time series (<code>TsGroup</code>)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/tsd.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Time series with data (<code>Tsd</code>)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Time series with data (<code>Tsd</code>)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/tsdframe.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Time series with multiple data columns (<code>TsdFrame</code>)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Time series with multiple data columns (<code>TsdFrame</code>)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/intervalset.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Intervals (<code>IntervalSet</code>)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Intervals (<code>IntervalSet</code>)</span></span></a>
   </div>
 </li>
       </ul>
@@ -222,19 +228,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/timesupport.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Time supports (<code>time_support</code>)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Time supports (<code>time_support</code>)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/restrict.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Restricting time series (<code>restrict</code>)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Restricting time series (<code>restrict</code>)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/value_from.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Taking values (<code>value_from</code>)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Taking values (<code>value_from</code>)</span></span></a>
   </div>
 </li>
       </ul>
@@ -251,13 +257,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/numpy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Numpy</span></span></a>
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Numpy</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/slicing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Slicing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Slicing</span></span></a>
   </div>
 </li>
       </ul>
@@ -274,25 +280,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/binning.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Binning (<code>count</code>)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Binning (<code>count</code>)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/averaging.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Averaging (<code>bin_average</code>)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Averaging (<code>bin_average</code>)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/thresholding.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Thresholding (<code>threshold</code>)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Thresholding (<code>threshold</code>)</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/smoothing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Smoothing (<code>smooth</code>)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Smoothing (<code>smooth</code>)</span></span></a>
   </div>
 </li>
       </ul>
@@ -309,25 +315,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/correlogram.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Correlograms</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Correlograms</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/signal.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Signal processing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Signal processing</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/perievent.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Perievent</span></span></a>
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Perievent</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/tuning_curves.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Tuning curves</span></span></a>
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Tuning curves</span></span></a>
   </div>
 </li>
       </ul>
@@ -344,19 +350,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/pynaviz.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Pynaviz</span></span></a>
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Pynaviz</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/nemos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">NeMoS</span></span></a>
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">NeMoS</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/spikeinterface.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">SpikeInterface</span></span></a>
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">SpikeInterface</span></span></a>
   </div>
 </li>
       </ul>
@@ -373,13 +379,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/loading.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Loading &amp; saving</span></span></a>
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Loading &amp; saving</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../snippets/streaming.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Streaming from DANDI</span></span></a>
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Streaming from DANDI</span></span></a>
   </div>
 </li>
       </ul>
@@ -396,19 +402,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../project-beginner.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Project level: beginner</span></span></a>
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Project level: beginner</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../project-intermediate.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Project level: intermediate</span></span></a>
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Project level: intermediate</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../project-hard.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Project level: hard</span></span></a>
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Project level: hard</span></span></a>
   </div>
 </li>
       </ul>
@@ -422,9 +428,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content column-page-right" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../snippets/correlogram.html">Advanced functions</a></li><li class="breadcrumb-item"><a href="../snippets/tuning_curves.html"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Tuning curves</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../snippets/correlogram.html">Advanced functions</a></li><li class="breadcrumb-item"><a href="../snippets/tuning_curves.html"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Tuning curves</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span id="sec-tcs" class="quarto-section-identifier"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Tuning curves</span></span></h1>
+<h1 class="title"><span id="sec-tcs" class="quarto-section-identifier"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Tuning curves</span></span></h1>
 </div>
 
 
@@ -441,9 +447,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="simulated-head-direction-cells" class="level2" data-number="20.1">
-<h2 data-number="20.1" class="anchored" data-anchor-id="simulated-head-direction-cells"><span class="header-section-number">20.1</span> Simulated head direction cells</h2>
-<div id="15f85de5" class="cell" data-execution_count="2">
+<section id="simulated-head-direction-cells" class="level2" data-number="21.1">
+<h2 data-number="21.1" class="anchored" data-anchor-id="simulated-head-direction-cells"><span class="header-section-number">21.1</span> Simulated head direction cells</h2>
+<div id="6aca9e52" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pynapple <span class="im">as</span> nap</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -475,18 +481,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>  Index     rate
 -------  -------
-      0  15.033
-      1  15.6031
-      2  12.8726
-      3  11.3923
-      4  12.0224
-      5  13.1526</code></pre>
+      0  12.4212
+      1  11.7012
+      2  11.9612
+      3  13.6914
+      4  13.8414
+      5  15.8116</code></pre>
 </div>
 </div>
 </section>
-<section id="xarray-tuning-curve-object" class="level2" data-number="20.2">
-<h2 data-number="20.2" class="anchored" data-anchor-id="xarray-tuning-curve-object"><span class="header-section-number">20.2</span> <code>xarray</code> tuning curve object</h2>
-<div id="0ba221ec" class="cell" data-execution_count="3">
+<section id="xarray-tuning-curve-object" class="level2" data-number="21.2">
+<h2 data-number="21.2" class="anchored" data-anchor-id="xarray-tuning-curve-object"><span class="header-section-number">21.2</span> <code>xarray</code> tuning curve object</h2>
+<div id="b0ed01f6" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>tuning_curves <span class="op">=</span> nap.compute_tuning_curves(</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>tsgroup,</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    features<span class="op">=</span>feature,</span>
@@ -1039,12 +1045,12 @@ dl.xr-attrs {
   stroke-width: 0.8px;
 }
 </style><pre class="xr-text-repr-fallback">&lt;xarray.DataArray (unit: 6, feature: 120)&gt; Size: 6kB
-array([[65.04854369, 68.88888889, 50.58823529, 69.04761905, 57.29166667,
-        63.85542169, 49.38271605, 46.06741573, 45.83333333, 40.65934066,
-        38.61386139, 41.93548387, 25.23364486, 30.70866142, 20.        ,
-        17.39130435, 10.67961165, 12.72727273, 11.21495327,  4.90196078,
-        10.78431373,  5.88235294,  2.97029703,  3.57142857,  0.        ,
-         2.5       ,  1.31578947,  1.81818182,  0.        ,  0.        ,
+array([[63.46153846, 74.50980392, 56.89655172, 60.        , 48.57142857,
+        65.51724138, 51.1627907 , 60.86956522, 38.46153846, 52.11267606,
+        40.        , 38.75      , 30.55555556, 23.37662338, 20.87912088,
+        18.44660194, 20.3125    , 17.39130435,  8.33333333,  7.79220779,
+         5.40540541,  3.03030303,  0.        ,  1.42857143,  3.125     ,
+         1.75438596,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
@@ -1056,9 +1062,9 @@ array([[65.04854369, 68.88888889, 50.58823529, 69.04761905, 57.29166667,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-         0.        ,  0.        ,  0.        ,  0.        ,  0.74626866,
-         0.        ,  0.        ,  1.19047619,  3.26086957,  0.        ,
-         3.125     ,  7.04225352,  0.        ,  7.04225352,  9.5890411 ,
+         0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+         0.        ,  1.17647059,  0.98039216,  1.03092784,  3.2967033 ,
+         1.03092784,  0.        ,  6.97674419,  4.72972973,  3.33333333,
 ...
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
@@ -1069,30 +1075,30 @@ array([[65.04854369, 68.88888889, 50.58823529, 69.04761905, 57.29166667,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-         0.        ,  0.        ,  0.        ,  0.        ,  1.26582278,
-         0.        ,  0.        ,  0.        ,  1.72413793,  1.72413793,
-         1.75438596,  6.38297872,  2.56410256,  6.94444444,  4.61538462,
-         8.64197531, 10.30927835, 16.90140845, 13.04347826, 13.88888889,
-        21.73913043, 22.85714286, 26.31578947, 38.55421687, 39.55223881,
-        40.4494382 , 45.45454545, 46.42857143, 39.13043478, 52.77777778,
-        68.75      , 57.74647887, 58.66666667, 61.97183099, 68.49315068,
-        71.60493827, 65.71428571, 66.17647059, 68.42105263, 49.39759036,
-        59.72222222, 48.52941176, 45.88235294, 41.75824176, 48.27586207,
-        33.75      , 33.33333333, 34.14634146, 24.65753425, 22.80701754,
-        23.71134021, 14.75409836, 11.23595506,  7.21649485,  4.76190476]])
+         0.        ,  1.4084507 ,  0.        ,  0.        ,  0.        ,
+         0.        ,  0.        ,  1.42857143,  1.14942529,  0.        ,
+         1.11111111,  4.6728972 ,  4.54545455,  6.97674419,  6.17283951,
+        12.64367816,  6.66666667, 15.47619048, 13.95348837, 13.25301205,
+        20.65217391, 24.71910112, 29.78723404, 37.5       , 35.55555556,
+        46.07843137, 35.29411765, 56.8627451 , 48.45360825, 58.24175824,
+        47.42268041, 63.7254902 , 55.03875969, 63.51351351, 58.        ,
+        64.34782609, 58.65384615, 62.96296296, 56.8627451 , 61.66666667,
+        53.73134328, 46.66666667, 52.72727273, 48.93617021, 38.55421687,
+        27.84810127, 37.        , 29.33333333, 30.        , 20.51282051,
+        17.14285714, 13.88888889,  7.89473684,  8.77192982, 11.47540984]])
 Coordinates:
   * unit     (unit) int64 48B 0 1 2 3 4 5
   * feature  (feature) float64 960B 0.02618 0.07854 0.1309 ... 6.152 6.205 6.257
 Attributes:
-    occupancy:  [103.  90.  85.  84.  96.  83.  81.  89.  96.  91. 101. 124. ...
+    occupancy:  [ 52.  51.  58.  50.  70.  58.  86.  92.  78.  71.  60.  80. ...
     bin_edges:  [array([0.        , 0.05235988, 0.10471976, 0.15707963, 0.209...
     fs:         100.0
-    rates:      [15.03150315 15.60156016 12.87128713 11.39113911 12.02120212 ...</pre><div class="xr-wrap" style="display:none"><div class="xr-header"><div class="xr-obj-type">xarray.DataArray</div><div class="xr-obj-name"></div><ul class="xr-dim-list"><li><span class="xr-has-index">unit</span>: 6</li><li><span class="xr-has-index">feature</span>: 120</li></ul></div><ul class="xr-sections"><li class="xr-section-item"><div class="xr-array-wrap"><input id="section-3b7e7243-a61a-4db5-943a-17f94e2646f7" class="xr-array-in" type="checkbox" checked=""><label for="section-3b7e7243-a61a-4db5-943a-17f94e2646f7" title="Show/hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-array-preview xr-preview"><span>65.05 68.89 50.59 69.05 57.29 63.86 ... 23.71 14.75 11.24 7.216 4.762</span></div><div class="xr-array-data"><pre>array([[65.04854369, 68.88888889, 50.58823529, 69.04761905, 57.29166667,
-        63.85542169, 49.38271605, 46.06741573, 45.83333333, 40.65934066,
-        38.61386139, 41.93548387, 25.23364486, 30.70866142, 20.        ,
-        17.39130435, 10.67961165, 12.72727273, 11.21495327,  4.90196078,
-        10.78431373,  5.88235294,  2.97029703,  3.57142857,  0.        ,
-         2.5       ,  1.31578947,  1.81818182,  0.        ,  0.        ,
+    rates:      [12.42124212 11.70117012 11.96119612 13.69136914 13.84138414 ...</pre><div class="xr-wrap" style="display:none"><div class="xr-header"><div class="xr-obj-type">xarray.DataArray</div><div class="xr-obj-name"></div><ul class="xr-dim-list"><li><span class="xr-has-index">unit</span>: 6</li><li><span class="xr-has-index">feature</span>: 120</li></ul></div><ul class="xr-sections"><li class="xr-section-item"><div class="xr-array-wrap"><input id="section-05c00c26-be7a-47c2-9388-949cbe427b8e" class="xr-array-in" type="checkbox" checked=""><label for="section-05c00c26-be7a-47c2-9388-949cbe427b8e" title="Show/hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-array-preview xr-preview"><span>63.46 74.51 56.9 60.0 48.57 65.52 ... 17.14 13.89 7.895 8.772 11.48</span></div><div class="xr-array-data"><pre>array([[63.46153846, 74.50980392, 56.89655172, 60.        , 48.57142857,
+        65.51724138, 51.1627907 , 60.86956522, 38.46153846, 52.11267606,
+        40.        , 38.75      , 30.55555556, 23.37662338, 20.87912088,
+        18.44660194, 20.3125    , 17.39130435,  8.33333333,  7.79220779,
+         5.40540541,  3.03030303,  0.        ,  1.42857143,  3.125     ,
+         1.75438596,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
@@ -1104,9 +1110,9 @@ Attributes:
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-         0.        ,  0.        ,  0.        ,  0.        ,  0.74626866,
-         0.        ,  0.        ,  1.19047619,  3.26086957,  0.        ,
-         3.125     ,  7.04225352,  0.        ,  7.04225352,  9.5890411 ,
+         0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
+         0.        ,  1.17647059,  0.98039216,  1.03092784,  3.2967033 ,
+         1.03092784,  0.        ,  6.97674419,  4.72972973,  3.33333333,
 ...
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
@@ -1117,17 +1123,17 @@ Attributes:
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-         0.        ,  0.        ,  0.        ,  0.        ,  1.26582278,
-         0.        ,  0.        ,  0.        ,  1.72413793,  1.72413793,
-         1.75438596,  6.38297872,  2.56410256,  6.94444444,  4.61538462,
-         8.64197531, 10.30927835, 16.90140845, 13.04347826, 13.88888889,
-        21.73913043, 22.85714286, 26.31578947, 38.55421687, 39.55223881,
-        40.4494382 , 45.45454545, 46.42857143, 39.13043478, 52.77777778,
-        68.75      , 57.74647887, 58.66666667, 61.97183099, 68.49315068,
-        71.60493827, 65.71428571, 66.17647059, 68.42105263, 49.39759036,
-        59.72222222, 48.52941176, 45.88235294, 41.75824176, 48.27586207,
-        33.75      , 33.33333333, 34.14634146, 24.65753425, 22.80701754,
-        23.71134021, 14.75409836, 11.23595506,  7.21649485,  4.76190476]])</pre></div></div></li><li class="xr-section-item"><input id="section-20cb8986-ceb3-47b0-9ef4-5b4da1ec8406" class="xr-section-summary-in" type="checkbox" checked=""><label for="section-20cb8986-ceb3-47b0-9ef4-5b4da1ec8406" class="xr-section-summary" title="Expand/collapse section">Coordinates: <span>(2)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">unit</span></div><div class="xr-var-dims">(unit)</div><div class="xr-var-dtype">int64</div><div class="xr-var-preview xr-preview">0 1 2 3 4 5</div><input id="attrs-93774a34-986d-45f1-8b73-a3a0f38b1ae8" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-93774a34-986d-45f1-8b73-a3a0f38b1ae8" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-b67c3728-a4fc-4731-9bca-80b889eebd04" class="xr-var-data-in" type="checkbox"><label for="data-b67c3728-a4fc-4731-9bca-80b889eebd04" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([0, 1, 2, 3, 4, 5])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">feature</span></div><div class="xr-var-dims">(feature)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">0.02618 0.07854 ... 6.205 6.257</div><input id="attrs-05a4a9b0-316a-4bbc-9067-d61e649b1a1e" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-05a4a9b0-316a-4bbc-9067-d61e649b1a1e" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-43d616e6-ac03-4ec5-8d41-a8523329aa55" class="xr-var-data-in" type="checkbox"><label for="data-43d616e6-ac03-4ec5-8d41-a8523329aa55" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([0.02618 , 0.07854 , 0.1309  , 0.18326 , 0.235619, 0.287979, 0.340339,
+         0.        ,  1.4084507 ,  0.        ,  0.        ,  0.        ,
+         0.        ,  0.        ,  1.42857143,  1.14942529,  0.        ,
+         1.11111111,  4.6728972 ,  4.54545455,  6.97674419,  6.17283951,
+        12.64367816,  6.66666667, 15.47619048, 13.95348837, 13.25301205,
+        20.65217391, 24.71910112, 29.78723404, 37.5       , 35.55555556,
+        46.07843137, 35.29411765, 56.8627451 , 48.45360825, 58.24175824,
+        47.42268041, 63.7254902 , 55.03875969, 63.51351351, 58.        ,
+        64.34782609, 58.65384615, 62.96296296, 56.8627451 , 61.66666667,
+        53.73134328, 46.66666667, 52.72727273, 48.93617021, 38.55421687,
+        27.84810127, 37.        , 29.33333333, 30.        , 20.51282051,
+        17.14285714, 13.88888889,  7.89473684,  8.77192982, 11.47540984]])</pre></div></div></li><li class="xr-section-item"><input id="section-549d1181-ed5a-4dea-9ed9-eedd634c707e" class="xr-section-summary-in" type="checkbox" checked=""><label for="section-549d1181-ed5a-4dea-9ed9-eedd634c707e" class="xr-section-summary" title="Expand/collapse section">Coordinates: <span>(2)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">unit</span></div><div class="xr-var-dims">(unit)</div><div class="xr-var-dtype">int64</div><div class="xr-var-preview xr-preview">0 1 2 3 4 5</div><input id="attrs-d3e14d69-d93e-459d-b10f-e4b13d3dd043" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-d3e14d69-d93e-459d-b10f-e4b13d3dd043" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-8ebccfbe-58ba-4865-80e1-4acae8a6e637" class="xr-var-data-in" type="checkbox"><label for="data-8ebccfbe-58ba-4865-80e1-4acae8a6e637" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([0, 1, 2, 3, 4, 5])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">feature</span></div><div class="xr-var-dims">(feature)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">0.02618 0.07854 ... 6.205 6.257</div><input id="attrs-aecb4021-0d82-4b0e-8523-9b6e3ad0be8a" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-aecb4021-0d82-4b0e-8523-9b6e3ad0be8a" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-7c895106-39f7-4697-a36d-6a1ee9d490eb" class="xr-var-data-in" type="checkbox"><label for="data-7c895106-39f7-4697-a36d-6a1ee9d490eb" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([0.02618 , 0.07854 , 0.1309  , 0.18326 , 0.235619, 0.287979, 0.340339,
        0.392699, 0.445059, 0.497419, 0.549779, 0.602139, 0.654498, 0.706858,
        0.759218, 0.811578, 0.863938, 0.916298, 0.968658, 1.021018, 1.073377,
        1.125737, 1.178097, 1.230457, 1.282817, 1.335177, 1.387537, 1.439897,
@@ -1144,15 +1150,15 @@ Attributes:
        5.157448, 5.209808, 5.262168, 5.314528, 5.366887, 5.419247, 5.471607,
        5.523967, 5.576327, 5.628687, 5.681047, 5.733407, 5.785766, 5.838126,
        5.890486, 5.942846, 5.995206, 6.047566, 6.099926, 6.152286, 6.204645,
-       6.257005])</pre></div></li></ul></div></li><li class="xr-section-item"><input id="section-157806a3-6b9b-4601-b28a-88fd5e624f42" class="xr-section-summary-in" type="checkbox" checked=""><label for="section-157806a3-6b9b-4601-b28a-88fd5e624f42" class="xr-section-summary" title="Expand/collapse section">Attributes: <span>(4)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>occupancy :</span></dt><dd>[103.  90.  85.  84.  96.  83.  81.  89.  96.  91. 101. 124. 107. 127.
- 120. 115. 103. 110. 107. 102. 102. 119. 101.  84.  81.  80.  76. 110.
- 114.  94.  89.  87.  98.  92.  89.  80.  84.  67.  71.  67.  71.  62.
-  65.  66.  68.  67.  74. 106.  71.  67.  69.  68.  70.  77.  71.  75.
-  71.  91.  91.  70.  64.  60.  54.  54.  61.  71.  62.  64.  71.  79.
-  70.  66.  69.  58.  58.  57.  94.  78.  72.  65.  81.  97.  71.  69.
-  72.  69.  70.  76.  83. 134.  89.  99.  84.  92. 108.  96.  71.  75.
-  71.  73.  81.  70.  68.  76.  83.  72.  68.  85.  91.  87.  80.  84.
-  82.  73. 114.  97. 122.  89.  97. 105.]</dd><dt><span>bin_edges :</span></dt><dd>[array([0.        , 0.05235988, 0.10471976, 0.15707963, 0.20943951,
+       6.257005])</pre></div></li></ul></div></li><li class="xr-section-item"><input id="section-7adb4114-cb44-41a0-9745-81a536ad040b" class="xr-section-summary-in" type="checkbox" checked=""><label for="section-7adb4114-cb44-41a0-9745-81a536ad040b" class="xr-section-summary" title="Expand/collapse section">Attributes: <span>(4)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>occupancy :</span></dt><dd>[ 52.  51.  58.  50.  70.  58.  86.  92.  78.  71.  60.  80.  72.  77.
+  91. 103.  64.  69.  72.  77.  74.  66.  68.  70.  64.  57.  59.  66.
+  67.  87.  73.  80.  60.  66.  64.  66.  63.  67.  66.  63.  77.  84.
+ 107.  72.  74.  92.  88.  68.  81.  70. 104.  84.  77.  83.  93. 106.
+ 118.  82.  79.  81. 102.  77.  76.  87.  86.  61.  71.  86.  79.  96.
+  83.  83.  70.  87.  93.  90. 107. 110.  86.  81.  87.  75.  84.  86.
+  83.  92.  89.  94.  96.  90. 102.  85. 102.  97.  91.  97. 102. 129.
+ 148. 150. 115. 104. 108. 102. 120. 134. 105. 110.  94.  83.  79. 100.
+  75.  70.  78.  70.  72.  76.  57.  61.]</dd><dt><span>bin_edges :</span></dt><dd>[array([0.        , 0.05235988, 0.10471976, 0.15707963, 0.20943951,
        0.26179939, 0.31415927, 0.36651914, 0.41887902, 0.4712389 ,
        0.52359878, 0.57595865, 0.62831853, 0.68067841, 0.73303829,
        0.78539816, 0.83775804, 0.89011792, 0.9424778 , 0.99483767,
@@ -1176,21 +1182,21 @@ Attributes:
        5.49778714, 5.55014702, 5.6025069 , 5.65486678, 5.70722665,
        5.75958653, 5.81194641, 5.86430629, 5.91666616, 5.96902604,
        6.02138592, 6.0737458 , 6.12610567, 6.17846555, 6.23082543,
-       6.28318531])]</dd><dt><span>fs :</span></dt><dd>100.0</dd><dt><span>rates :</span></dt><dd>[15.03150315 15.60156016 12.87128713 11.39113911 12.02120212 13.15131513]</dd></dl></div></li></ul></div></div>
+       6.28318531])]</dd><dt><span>fs :</span></dt><dd>100.0</dd><dt><span>rates :</span></dt><dd>[12.42124212 11.70117012 11.96119612 13.69136914 13.84138414 15.81158116]</dd></dl></div></li></ul></div></div>
 </div>
 </div>
 </section>
-<section id="easy-visualisation" class="level2" data-number="20.3">
-<h2 data-number="20.3" class="anchored" data-anchor-id="easy-visualisation"><span class="header-section-number">20.3</span> Easy visualisation</h2>
+<section id="easy-visualisation" class="level2" data-number="21.3">
+<h2 data-number="21.3" class="anchored" data-anchor-id="easy-visualisation"><span class="header-section-number">21.3</span> Easy visualisation</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div id="d5dd3ab3" class="cell" data-execution_count="4">
+<div id="004f7e72" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>tuning_curves.plot.line(x<span class="op">=</span><span class="st">"feature"</span>, add_legend<span class="op">=</span><span class="va">False</span>)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"firing rate [Hz]"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div><div class="column" style="width:50%;">
-<div id="38a55cee" class="cell" data-execution_count="5">
+<div id="6a3ad786" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -1202,11 +1208,11 @@ Attributes:
 </div>
 </div>
 </section>
-<section id="sec-decoding" class="level2" data-number="20.4">
-<h2 data-number="20.4" class="anchored" data-anchor-id="sec-decoding"><span class="header-section-number">20.4</span> Decoding</h2>
+<section id="sec-decoding" class="level2" data-number="21.4">
+<h2 data-number="21.4" class="anchored" data-anchor-id="sec-decoding"><span class="header-section-number">21.4</span> Decoding</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div id="40a370f6" class="cell" data-execution_count="6">
+<div id="27076851" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>decoded, proba_feature <span class="op">=</span> nap.decode_bayes(</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    tuning_curves<span class="op">=</span>tuning_curves,</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>tsgroup,</span>
@@ -1218,26 +1224,26 @@ Attributes:
 <div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>Time (s)
 -------------------  --------
-0.01                 0.863938
-0.03                 1.33518
-0.05                 1.28282
-0.06999999999999999  1.28282
-0.09                 1.28282
-0.11                 1.28282
-0.13                 1.54462
+0.01                 1.12574
+0.03                 0.706858
+0.05                 0.706858
+0.06999999999999999  0.706858
+0.09                 0.602139
+0.11                 0.706858
+0.13                 0.392699
 ...
-9.87                 2.43473
-9.89                 2.43473
-9.91                 2.33001
-9.93                 2.43473
-9.95                 2.33001
-9.97                 2.33001
-9.99                 2.33001
+9.87                 2.85361
+9.89                 3.37721
+9.91                 3.48193
+9.93                 3.32485
+9.95                 3.63901
+9.97                 3.95317
+9.99                 4.05789
 dtype: float64, shape: (500,)</code></pre>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
-<div id="c8e7ce15" class="cell" data-execution_count="7">
+<div id="68ba0b9e" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -1657,12 +1663,12 @@ dtype: float64, shape: (500,)</code></pre>
 <nav class="page-navigation column-page-right">
   <div class="nav-page nav-page-previous">
       <a href="../snippets/perievent.html" class="pagination-link" aria-label="Perievent">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Perievent</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Perievent</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../snippets/pynaviz.html" class="pagination-link" aria-label="Pynaviz">
-        <span class="nav-page-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Pynaviz</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Pynaviz</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
