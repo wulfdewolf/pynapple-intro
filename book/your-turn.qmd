@@ -1,0 +1,10 @@
+---
+toc: false
+---
+# Neural decoding of head direction {.unnumbered}
+
+Now it is your turn!  
+See if you can decode head direction from head direction cells in the postsubiculum.  
+If you are confident, you can write your own code and see how far you get.  
+Otherwise, follow along in [this notebook](https://colab.research.google.com/drive/1o3IJtprvaTzwHxThGTdInE6GYADBULyA?usp=sharing), and play around with the snippets shown before.
+
