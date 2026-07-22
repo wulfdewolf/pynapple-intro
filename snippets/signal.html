@@ -401,20 +401,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../project-beginner.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Project level: beginner</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../project-intermediate.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Project level: intermediate</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../project-hard.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Project level: hard</span></span></a>
+  <a href="../your-turn.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Neural decoding of head direction</span></a>
   </div>
 </li>
       </ul>
@@ -451,7 +439,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="19.1" class="anchored" data-anchor-id="simulated-multi-frequency-signal"><span class="header-section-number">19.1</span> Simulated multi-frequency signal</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
-<div id="cbf33a5a" class="cell" data-execution_count="2">
+<div id="1e65dc8e" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pynapple <span class="im">as</span> nap</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>fs <span class="op">=</span> <span class="dv">1000</span></span>
@@ -465,26 +453,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>Time (s)
 ---------------------  -------
-0.0                    3.38785
-0.0010005002501250625  2.22935
-0.002001000500250125   2.87261
-0.003001500750375187   2.58975
-0.00400200100050025    2.64152
-0.0050025012506253125  2.23856
-0.006003001500750374   1.78302
+0.0                    2.64245
+0.0010005002501250625  3.57662
+0.002001000500250125   2.65813
+0.003001500750375187   2.39727
+0.00400200100050025    2.13886
+0.0050025012506253125  2.03328
+0.006003001500750374   1.77981
 ...
-1.9939969984992494     1.50478
-1.9949974987493746     2.23485
-1.9959979989994996     2.30405
-1.9969984992496246     2.42608
-1.9979989994997498     2.57244
-1.9989994997498748     2.51945
-2.0                    2.96384
+1.9939969984992494     1.57808
+1.9949974987493746     1.53595
+1.9959979989994996     1.76478
+1.9969984992496246     2.70225
+1.9979989994997498     2.85359
+1.9989994997498748     2.61803
+2.0                    2.77927
 dtype: float64, shape: (2000,)</code></pre>
 </div>
 </div>
 </div><div class="column" style="width:60%;">
-<div id="6417a263" class="cell" data-execution_count="3">
+<div id="2be59976" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -500,7 +488,7 @@ dtype: float64, shape: (2000,)</code></pre>
 <h2 data-number="19.2" class="anchored" data-anchor-id="bandpass-filter"><span class="header-section-number">19.2</span> Bandpass filter</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
-<div id="5bc77132" class="cell" data-execution_count="4">
+<div id="ef899903" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>filtered <span class="op">=</span> nap.apply_bandpass_filter(</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>tsd, </span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    cutoff<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">12</span>), </span>
@@ -511,26 +499,26 @@ dtype: float64, shape: (2000,)</code></pre>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>Time (s)
 ---------------------  ----------
-0.0                    0.29769
-0.0010005002501250625  0.271251
-0.002001000500250125   0.243725
-0.003001500750375187   0.215192
-0.00400200100050025    0.185733
-0.0050025012506253125  0.155435
-0.006003001500750374   0.124388
+0.0                    0.408717
+0.0010005002501250625  0.39122
+0.002001000500250125   0.372175
+0.003001500750375187   0.351626
+0.00400200100050025    0.329622
+0.0050025012506253125  0.306216
+0.006003001500750374   0.28147
 ...
-1.9939969984992494     0.00307277
-1.9949974987493746     0.00277395
-1.9959979989994996     0.00248744
-1.9969984992496246     0.00221509
-1.9979989994997498     0.00195837
-1.9989994997498748     0.0017184
-2.0                    0.00149597
+1.9939969984992494     0.00309179
+1.9949974987493746     0.0027922
+1.9959979989994996     0.00250474
+1.9969984992496246     0.0022313
+1.9979989994997498     0.0019734
+1.9989994997498748     0.00173219
+2.0                    0.00150849
 dtype: float64, shape: (2000,)</code></pre>
 </div>
 </div>
 </div><div class="column" style="width:60%;">
-<div id="f52b9307" class="cell" data-execution_count="5">
+<div id="78561eed" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -546,7 +534,7 @@ dtype: float64, shape: (2000,)</code></pre>
 <h2 data-number="19.3" class="anchored" data-anchor-id="power-spectral-density"><span class="header-section-number">19.3</span> Power-spectral density</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
-<div id="e4e58bed" class="cell" data-execution_count="6">
+<div id="f5cb5336" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>psd <span class="op">=</span> nap.compute_power_spectral_density(</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    tsd, </span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    fs<span class="op">=</span>fs</span>
@@ -566,23 +554,23 @@ dtype: float64, shape: (2000,)</code></pre>
 <tbody>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">0.0</th>
-<td>0.000025</td>
+<td>0.000005</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">0.5</th>
-<td>0.000174</td>
+<td>0.000274</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">1.0</th>
-<td>0.000097</td>
+<td>0.000373</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">1.5</th>
-<td>0.000497</td>
+<td>0.000156</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">2.0</th>
-<td>1.003249</td>
+<td>1.011827</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">...</th>
@@ -590,23 +578,23 @@ dtype: float64, shape: (2000,)</code></pre>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">497.5</th>
-<td>0.000761</td>
+<td>0.000191</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">498.0</th>
-<td>0.000188</td>
+<td>0.000046</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">498.5</th>
-<td>0.000258</td>
+<td>0.000079</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">499.0</th>
-<td>0.000894</td>
+<td>0.000026</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">499.5</th>
-<td>0.000095</td>
+<td>0.001498</td>
 </tr>
 </tbody>
 </table>
@@ -616,7 +604,7 @@ dtype: float64, shape: (2000,)</code></pre>
 </div>
 </div>
 </div><div class="column" style="width:60%;">
-<div id="99b2c1b3" class="cell" data-execution_count="7">
+<div id="54c0fb8c" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">

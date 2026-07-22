@@ -398,20 +398,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../project-beginner.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Project level: beginner</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../project-intermediate.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Project level: intermediate</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../project-hard.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Project level: hard</span></span></a>
+  <a href="../your-turn.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Neural decoding of head direction</span></a>
   </div>
 </li>
       </ul>
@@ -448,7 +436,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="20.1" class="anchored" data-anchor-id="simulated-spiking-unit"><span class="header-section-number">20.1</span> Simulated spiking unit</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
-<div id="2079b477" class="cell" data-execution_count="2">
+<div id="ca3eb82a" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pynapple <span class="im">as</span> nap</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>stimuli <span class="op">=</span> nap.Ts(t<span class="op">=</span>np.arange(<span class="dv">0</span>, <span class="dv">1000</span>, <span class="dv">1</span>), time_units<span class="op">=</span><span class="st">"s"</span>)</span>
@@ -464,26 +452,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>ts</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>Time (s)
-0.05601866506309103
-0.1484915343441416
-0.15821618663825018
-1.058185586073727
-1.0857793019622028
-1.1195361613661747
-1.199498332800892
+0.08523415674248622
+0.14164606655395304
+0.15238348781207722
+1.0246865979789603
+1.0728664266703758
+1.0744352279806042
+1.607068738658235
 ...
-998.0177951646317
-998.1479503678888
-998.15062914418
-998.8450956161616
-999.0255924947994
-999.1335549202666
-999.14817607138
+998.0419174697408
+998.0549143383058
+998.17210900468
+999.0081811278299
+999.0978970661826
+999.1157571264887
+999.1998066179041
 shape: 3500</code></pre>
 </div>
 </div>
 </div><div class="column" style="width:60%;">
-<div id="b10c036f" class="cell" data-execution_count="3">
+<div id="9085f109" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -499,7 +487,7 @@ shape: 3500</code></pre>
 <h2 data-number="20.2" class="anchored" data-anchor-id="peri-event-time-histograms-peth"><span class="header-section-number">20.2</span> Peri-Event Time Histograms (PETH)</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
-<div id="6060adb0" class="cell" data-execution_count="4">
+<div id="3f0b8944" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>peth <span class="op">=</span> nap.compute_perievent(</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>ts, </span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    events<span class="op">=</span>stimuli, </span>
@@ -508,7 +496,7 @@ shape: 3500</code></pre>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>Index    rate    events
 -------  ------  --------
-0        8.0     1.0
+0        6.0     1.0
 1        8.0     2.0
 2        6.0     3.0
 3        6.0     4.0
@@ -518,14 +506,14 @@ shape: 3500</code></pre>
 ...      ...     ...
 992      6.0     993.0
 993      6.0     994.0
-994      6.0     995.0
-995      6.0     996.0
-996      8.0     997.0
+994      8.0     995.0
+995      10.0    996.0
+996      6.0     997.0
 997      6.0     998.0
-998      6.0     999.0</code></pre>
+998      8.0     999.0</code></pre>
 </div>
 </div>
-<div id="96ef34b4" class="cell" data-execution_count="5">
+<div id="3595566e" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>bin_size <span class="op">=</span> <span class="fl">0.01</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>peth_counts <span class="op">=</span> peth.count(bin_size)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>peth_counts</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -538,7 +526,7 @@ shape: 3500</code></pre>
 -0.065                 0    0    0    0    0    ...
 -0.055                 0    0    0    0    0    ...
 -0.045000000000000005  0    0    0    0    0    ...
--0.035                 0    0    0    0    0    ...
+-0.035                 0    1    0    0    0    ...
 ...                                             ...
 0.335                  0    0    0    0    0    ...
 0.34500000000000003    0    0    0    0    0    ...
@@ -553,7 +541,7 @@ dtype: int64, shape: (50, 999)</code></pre>
 </div>
 </div>
 </div><div class="column" style="width:60%;">
-<div id="632925b7" class="cell" data-execution_count="6">
+<div id="e8e637e6" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">

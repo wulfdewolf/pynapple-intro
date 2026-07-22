@@ -401,20 +401,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../project-beginner.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Project level: beginner</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../project-intermediate.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">Project level: intermediate</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../project-hard.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Project level: hard</span></span></a>
+  <a href="../your-turn.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Neural decoding of head direction</span></a>
   </div>
 </li>
       </ul>
@@ -449,7 +437,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="simulated-head-direction-cells" class="level2" data-number="21.1">
 <h2 data-number="21.1" class="anchored" data-anchor-id="simulated-head-direction-cells"><span class="header-section-number">21.1</span> Simulated head direction cells</h2>
-<div id="6aca9e52" class="cell" data-execution_count="2">
+<div id="f1bea47c" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pynapple <span class="im">as</span> nap</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -481,18 +469,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>  Index     rate
 -------  -------
-      0  12.4212
-      1  11.7012
-      2  11.9612
-      3  13.6914
-      4  13.8414
-      5  15.8116</code></pre>
+      0  15.1461
+      1  12.9352
+      2  12.485
+      3  12.495
+      4  13.4154
+      5  13.3453</code></pre>
 </div>
 </div>
 </section>
 <section id="xarray-tuning-curve-object" class="level2" data-number="21.2">
 <h2 data-number="21.2" class="anchored" data-anchor-id="xarray-tuning-curve-object"><span class="header-section-number">21.2</span> <code>xarray</code> tuning curve object</h2>
-<div id="b0ed01f6" class="cell" data-execution_count="3">
+<div id="636b20a7" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>tuning_curves <span class="op">=</span> nap.compute_tuning_curves(</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>tsgroup,</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    features<span class="op">=</span>feature,</span>
@@ -1045,12 +1033,13 @@ dl.xr-attrs {
   stroke-width: 0.8px;
 }
 </style><pre class="xr-text-repr-fallback">&lt;xarray.DataArray (unit: 6, feature: 120)&gt; Size: 6kB
-array([[63.46153846, 74.50980392, 56.89655172, 60.        , 48.57142857,
-        65.51724138, 51.1627907 , 60.86956522, 38.46153846, 52.11267606,
-        40.        , 38.75      , 30.55555556, 23.37662338, 20.87912088,
-        18.44660194, 20.3125    , 17.39130435,  8.33333333,  7.79220779,
-         5.40540541,  3.03030303,  0.        ,  1.42857143,  3.125     ,
-         1.75438596,  0.        ,  0.        ,  0.        ,  0.        ,
+array([[61.44578313, 65.55555556, 61.44578313, 56.81818182, 53.33333333,
+        55.10204082, 57.14285714, 49.52380952, 48.24561404, 46.72897196,
+        36.36363636, 35.45454545, 22.85714286, 24.35897436, 25.        ,
+        18.33333333, 14.47368421, 16.66666667,  6.17283951, 10.52631579,
+         6.75675676,  6.4516129 ,  1.53846154,  4.70588235,  0.        ,
+         3.22580645,  0.        ,  0.        ,  0.        ,  1.25      ,
+         1.35135135,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
@@ -1061,10 +1050,9 @@ array([[63.46153846, 74.50980392, 56.89655172, 60.        , 48.57142857,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-         0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-         0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-         0.        ,  1.17647059,  0.98039216,  1.03092784,  3.2967033 ,
-         1.03092784,  0.        ,  6.97674419,  4.72972973,  3.33333333,
+         0.        ,  0.        ,  0.        ,  0.        ,  1.28205128,
+         1.35135135,  0.        ,  4.54545455,  0.        ,  0.        ,
+         1.05263158,  4.28571429,  3.38983051,  3.75      ,  5.33333333,
 ...
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
@@ -1075,30 +1063,31 @@ array([[63.46153846, 74.50980392, 56.89655172, 60.        , 48.57142857,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-         0.        ,  1.4084507 ,  0.        ,  0.        ,  0.        ,
-         0.        ,  0.        ,  1.42857143,  1.14942529,  0.        ,
-         1.11111111,  4.6728972 ,  4.54545455,  6.97674419,  6.17283951,
-        12.64367816,  6.66666667, 15.47619048, 13.95348837, 13.25301205,
-        20.65217391, 24.71910112, 29.78723404, 37.5       , 35.55555556,
-        46.07843137, 35.29411765, 56.8627451 , 48.45360825, 58.24175824,
-        47.42268041, 63.7254902 , 55.03875969, 63.51351351, 58.        ,
-        64.34782609, 58.65384615, 62.96296296, 56.8627451 , 61.66666667,
-        53.73134328, 46.66666667, 52.72727273, 48.93617021, 38.55421687,
-        27.84810127, 37.        , 29.33333333, 30.        , 20.51282051,
-        17.14285714, 13.88888889,  7.89473684,  8.77192982, 11.47540984]])
+         0.        ,  0.        ,  0.        ,  0.        ,  1.20481928,
+         0.96153846,  0.        ,  1.07526882,  1.88679245,  0.93457944,
+         4.16666667,  2.53164557,  1.12359551, 11.76470588,  4.71698113,
+         9.67741935,  6.59340659, 12.5       , 14.47368421, 21.62162162,
+        21.79487179, 38.46153846, 27.39726027, 44.73684211, 28.20512821,
+        48.64864865, 42.5       , 43.93939394, 55.71428571, 63.63636364,
+        52.63157895, 51.42857143, 54.23728814, 58.75      , 69.33333333,
+        58.82352941, 55.26315789, 63.63636364, 60.41666667, 59.84848485,
+        63.63636364, 50.98039216, 41.02564103, 44.44444444, 33.33333333,
+        39.18918919, 45.83333333, 37.96296296, 23.89380531, 18.55670103,
+        26.82926829, 17.0212766 , 12.5       , 12.08791209,  3.80952381]])
 Coordinates:
   * unit     (unit) int64 48B 0 1 2 3 4 5
   * feature  (feature) float64 960B 0.02618 0.07854 0.1309 ... 6.152 6.205 6.257
 Attributes:
-    occupancy:  [ 52.  51.  58.  50.  70.  58.  86.  92.  78.  71.  60.  80. ...
+    occupancy:  [ 83.  90.  83.  88.  90.  98. 105. 105. 114. 107.  99. 110. ...
     bin_edges:  [array([0.        , 0.05235988, 0.10471976, 0.15707963, 0.209...
     fs:         100.0
-    rates:      [12.42124212 11.70117012 11.96119612 13.69136914 13.84138414 ...</pre><div class="xr-wrap" style="display:none"><div class="xr-header"><div class="xr-obj-type">xarray.DataArray</div><div class="xr-obj-name"></div><ul class="xr-dim-list"><li><span class="xr-has-index">unit</span>: 6</li><li><span class="xr-has-index">feature</span>: 120</li></ul></div><ul class="xr-sections"><li class="xr-section-item"><div class="xr-array-wrap"><input id="section-05c00c26-be7a-47c2-9388-949cbe427b8e" class="xr-array-in" type="checkbox" checked=""><label for="section-05c00c26-be7a-47c2-9388-949cbe427b8e" title="Show/hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-array-preview xr-preview"><span>63.46 74.51 56.9 60.0 48.57 65.52 ... 17.14 13.89 7.895 8.772 11.48</span></div><div class="xr-array-data"><pre>array([[63.46153846, 74.50980392, 56.89655172, 60.        , 48.57142857,
-        65.51724138, 51.1627907 , 60.86956522, 38.46153846, 52.11267606,
-        40.        , 38.75      , 30.55555556, 23.37662338, 20.87912088,
-        18.44660194, 20.3125    , 17.39130435,  8.33333333,  7.79220779,
-         5.40540541,  3.03030303,  0.        ,  1.42857143,  3.125     ,
-         1.75438596,  0.        ,  0.        ,  0.        ,  0.        ,
+    rates:      [15.14151415 12.93129313 12.48124812 12.49124912 13.41134113 ...</pre><div class="xr-wrap" style="display:none"><div class="xr-header"><div class="xr-obj-type">xarray.DataArray</div><div class="xr-obj-name"></div><ul class="xr-dim-list"><li><span class="xr-has-index">unit</span>: 6</li><li><span class="xr-has-index">feature</span>: 120</li></ul></div><ul class="xr-sections"><li class="xr-section-item"><div class="xr-array-wrap"><input id="section-c468ca27-7fce-4f80-b63f-73a803f994ea" class="xr-array-in" type="checkbox" checked=""><label for="section-c468ca27-7fce-4f80-b63f-73a803f994ea" title="Show/hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-array-preview xr-preview"><span>61.45 65.56 61.45 56.82 53.33 55.1 ... 26.83 17.02 12.5 12.09 3.81</span></div><div class="xr-array-data"><pre>array([[61.44578313, 65.55555556, 61.44578313, 56.81818182, 53.33333333,
+        55.10204082, 57.14285714, 49.52380952, 48.24561404, 46.72897196,
+        36.36363636, 35.45454545, 22.85714286, 24.35897436, 25.        ,
+        18.33333333, 14.47368421, 16.66666667,  6.17283951, 10.52631579,
+         6.75675676,  6.4516129 ,  1.53846154,  4.70588235,  0.        ,
+         3.22580645,  0.        ,  0.        ,  0.        ,  1.25      ,
+         1.35135135,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
@@ -1109,10 +1098,9 @@ Attributes:
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-         0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-         0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-         0.        ,  1.17647059,  0.98039216,  1.03092784,  3.2967033 ,
-         1.03092784,  0.        ,  6.97674419,  4.72972973,  3.33333333,
+         0.        ,  0.        ,  0.        ,  0.        ,  1.28205128,
+         1.35135135,  0.        ,  4.54545455,  0.        ,  0.        ,
+         1.05263158,  4.28571429,  3.38983051,  3.75      ,  5.33333333,
 ...
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
@@ -1123,17 +1111,17 @@ Attributes:
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
          0.        ,  0.        ,  0.        ,  0.        ,  0.        ,
-         0.        ,  1.4084507 ,  0.        ,  0.        ,  0.        ,
-         0.        ,  0.        ,  1.42857143,  1.14942529,  0.        ,
-         1.11111111,  4.6728972 ,  4.54545455,  6.97674419,  6.17283951,
-        12.64367816,  6.66666667, 15.47619048, 13.95348837, 13.25301205,
-        20.65217391, 24.71910112, 29.78723404, 37.5       , 35.55555556,
-        46.07843137, 35.29411765, 56.8627451 , 48.45360825, 58.24175824,
-        47.42268041, 63.7254902 , 55.03875969, 63.51351351, 58.        ,
-        64.34782609, 58.65384615, 62.96296296, 56.8627451 , 61.66666667,
-        53.73134328, 46.66666667, 52.72727273, 48.93617021, 38.55421687,
-        27.84810127, 37.        , 29.33333333, 30.        , 20.51282051,
-        17.14285714, 13.88888889,  7.89473684,  8.77192982, 11.47540984]])</pre></div></div></li><li class="xr-section-item"><input id="section-549d1181-ed5a-4dea-9ed9-eedd634c707e" class="xr-section-summary-in" type="checkbox" checked=""><label for="section-549d1181-ed5a-4dea-9ed9-eedd634c707e" class="xr-section-summary" title="Expand/collapse section">Coordinates: <span>(2)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">unit</span></div><div class="xr-var-dims">(unit)</div><div class="xr-var-dtype">int64</div><div class="xr-var-preview xr-preview">0 1 2 3 4 5</div><input id="attrs-d3e14d69-d93e-459d-b10f-e4b13d3dd043" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-d3e14d69-d93e-459d-b10f-e4b13d3dd043" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-8ebccfbe-58ba-4865-80e1-4acae8a6e637" class="xr-var-data-in" type="checkbox"><label for="data-8ebccfbe-58ba-4865-80e1-4acae8a6e637" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([0, 1, 2, 3, 4, 5])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">feature</span></div><div class="xr-var-dims">(feature)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">0.02618 0.07854 ... 6.205 6.257</div><input id="attrs-aecb4021-0d82-4b0e-8523-9b6e3ad0be8a" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-aecb4021-0d82-4b0e-8523-9b6e3ad0be8a" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-7c895106-39f7-4697-a36d-6a1ee9d490eb" class="xr-var-data-in" type="checkbox"><label for="data-7c895106-39f7-4697-a36d-6a1ee9d490eb" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([0.02618 , 0.07854 , 0.1309  , 0.18326 , 0.235619, 0.287979, 0.340339,
+         0.        ,  0.        ,  0.        ,  0.        ,  1.20481928,
+         0.96153846,  0.        ,  1.07526882,  1.88679245,  0.93457944,
+         4.16666667,  2.53164557,  1.12359551, 11.76470588,  4.71698113,
+         9.67741935,  6.59340659, 12.5       , 14.47368421, 21.62162162,
+        21.79487179, 38.46153846, 27.39726027, 44.73684211, 28.20512821,
+        48.64864865, 42.5       , 43.93939394, 55.71428571, 63.63636364,
+        52.63157895, 51.42857143, 54.23728814, 58.75      , 69.33333333,
+        58.82352941, 55.26315789, 63.63636364, 60.41666667, 59.84848485,
+        63.63636364, 50.98039216, 41.02564103, 44.44444444, 33.33333333,
+        39.18918919, 45.83333333, 37.96296296, 23.89380531, 18.55670103,
+        26.82926829, 17.0212766 , 12.5       , 12.08791209,  3.80952381]])</pre></div></div></li><li class="xr-section-item"><input id="section-4c836f2e-f92d-4e5b-84f6-2b458d26acbe" class="xr-section-summary-in" type="checkbox" checked=""><label for="section-4c836f2e-f92d-4e5b-84f6-2b458d26acbe" class="xr-section-summary" title="Expand/collapse section">Coordinates: <span>(2)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">unit</span></div><div class="xr-var-dims">(unit)</div><div class="xr-var-dtype">int64</div><div class="xr-var-preview xr-preview">0 1 2 3 4 5</div><input id="attrs-07df3a2b-bf31-46f4-b029-a593df30cfa2" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-07df3a2b-bf31-46f4-b029-a593df30cfa2" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-32b9ea4d-bd90-41da-be33-26c673251ff7" class="xr-var-data-in" type="checkbox"><label for="data-32b9ea4d-bd90-41da-be33-26c673251ff7" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([0, 1, 2, 3, 4, 5])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">feature</span></div><div class="xr-var-dims">(feature)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">0.02618 0.07854 ... 6.205 6.257</div><input id="attrs-62c26fda-eecd-41c5-9d0e-38a3c1143d1c" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-62c26fda-eecd-41c5-9d0e-38a3c1143d1c" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-f1a019e7-af5f-43e2-acf4-370992a23f35" class="xr-var-data-in" type="checkbox"><label for="data-f1a019e7-af5f-43e2-acf4-370992a23f35" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([0.02618 , 0.07854 , 0.1309  , 0.18326 , 0.235619, 0.287979, 0.340339,
        0.392699, 0.445059, 0.497419, 0.549779, 0.602139, 0.654498, 0.706858,
        0.759218, 0.811578, 0.863938, 0.916298, 0.968658, 1.021018, 1.073377,
        1.125737, 1.178097, 1.230457, 1.282817, 1.335177, 1.387537, 1.439897,
@@ -1150,15 +1138,15 @@ Attributes:
        5.157448, 5.209808, 5.262168, 5.314528, 5.366887, 5.419247, 5.471607,
        5.523967, 5.576327, 5.628687, 5.681047, 5.733407, 5.785766, 5.838126,
        5.890486, 5.942846, 5.995206, 6.047566, 6.099926, 6.152286, 6.204645,
-       6.257005])</pre></div></li></ul></div></li><li class="xr-section-item"><input id="section-7adb4114-cb44-41a0-9745-81a536ad040b" class="xr-section-summary-in" type="checkbox" checked=""><label for="section-7adb4114-cb44-41a0-9745-81a536ad040b" class="xr-section-summary" title="Expand/collapse section">Attributes: <span>(4)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>occupancy :</span></dt><dd>[ 52.  51.  58.  50.  70.  58.  86.  92.  78.  71.  60.  80.  72.  77.
-  91. 103.  64.  69.  72.  77.  74.  66.  68.  70.  64.  57.  59.  66.
-  67.  87.  73.  80.  60.  66.  64.  66.  63.  67.  66.  63.  77.  84.
- 107.  72.  74.  92.  88.  68.  81.  70. 104.  84.  77.  83.  93. 106.
- 118.  82.  79.  81. 102.  77.  76.  87.  86.  61.  71.  86.  79.  96.
-  83.  83.  70.  87.  93.  90. 107. 110.  86.  81.  87.  75.  84.  86.
-  83.  92.  89.  94.  96.  90. 102.  85. 102.  97.  91.  97. 102. 129.
- 148. 150. 115. 104. 108. 102. 120. 134. 105. 110.  94.  83.  79. 100.
-  75.  70.  78.  70.  72.  76.  57.  61.]</dd><dt><span>bin_edges :</span></dt><dd>[array([0.        , 0.05235988, 0.10471976, 0.15707963, 0.20943951,
+       6.257005])</pre></div></li></ul></div></li><li class="xr-section-item"><input id="section-ff0335d7-5784-4b80-b248-d9668199af23" class="xr-section-summary-in" type="checkbox" checked=""><label for="section-ff0335d7-5784-4b80-b248-d9668199af23" class="xr-section-summary" title="Expand/collapse section">Attributes: <span>(4)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>occupancy :</span></dt><dd>[ 83.  90.  83.  88.  90.  98. 105. 105. 114. 107.  99. 110.  70.  78.
+  72.  60.  76.  66.  81.  76.  74.  62.  65.  85.  78.  93.  67.  86.
+  63.  80.  74.  84.  79.  89.  68.  75.  95.  92.  89.  67.  75.  87.
+  77.  73.  72.  72.  75.  79.  92.  86.  66.  69.  74. 102.  72.  75.
+  77.  92.  80.  66.  78.  84.  76.  92.  70.  73.  51.  66.  71.  83.
+ 104. 122.  93. 106. 107.  96.  79.  89.  85. 106.  93.  91.  80.  76.
+  74.  78.  65.  73.  76.  78.  74.  80.  66.  70.  77.  95.  70.  59.
+  80.  75.  68.  76.  77.  96. 132.  88. 102.  78. 108.  81.  74.  96.
+ 108. 113.  97.  82.  94.  96.  91. 105.]</dd><dt><span>bin_edges :</span></dt><dd>[array([0.        , 0.05235988, 0.10471976, 0.15707963, 0.20943951,
        0.26179939, 0.31415927, 0.36651914, 0.41887902, 0.4712389 ,
        0.52359878, 0.57595865, 0.62831853, 0.68067841, 0.73303829,
        0.78539816, 0.83775804, 0.89011792, 0.9424778 , 0.99483767,
@@ -1182,7 +1170,7 @@ Attributes:
        5.49778714, 5.55014702, 5.6025069 , 5.65486678, 5.70722665,
        5.75958653, 5.81194641, 5.86430629, 5.91666616, 5.96902604,
        6.02138592, 6.0737458 , 6.12610567, 6.17846555, 6.23082543,
-       6.28318531])]</dd><dt><span>fs :</span></dt><dd>100.0</dd><dt><span>rates :</span></dt><dd>[12.42124212 11.70117012 11.96119612 13.69136914 13.84138414 15.81158116]</dd></dl></div></li></ul></div></div>
+       6.28318531])]</dd><dt><span>fs :</span></dt><dd>100.0</dd><dt><span>rates :</span></dt><dd>[15.14151415 12.93129313 12.48124812 12.49124912 13.41134113 13.34133413]</dd></dl></div></li></ul></div></div>
 </div>
 </div>
 </section>
@@ -1190,13 +1178,13 @@ Attributes:
 <h2 data-number="21.3" class="anchored" data-anchor-id="easy-visualisation"><span class="header-section-number">21.3</span> Easy visualisation</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div id="004f7e72" class="cell" data-execution_count="4">
+<div id="b9e25a82" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>tuning_curves.plot.line(x<span class="op">=</span><span class="st">"feature"</span>, add_legend<span class="op">=</span><span class="va">False</span>)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"firing rate [Hz]"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div><div class="column" style="width:50%;">
-<div id="6a3ad786" class="cell" data-execution_count="5">
+<div id="84fa57ed" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -1212,7 +1200,7 @@ Attributes:
 <h2 data-number="21.4" class="anchored" data-anchor-id="sec-decoding"><span class="header-section-number">21.4</span> Decoding</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div id="27076851" class="cell" data-execution_count="6">
+<div id="4f153a21" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>decoded, proba_feature <span class="op">=</span> nap.decode_bayes(</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    tuning_curves<span class="op">=</span>tuning_curves,</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>tsgroup,</span>
@@ -1223,27 +1211,27 @@ Attributes:
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>decoded</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>Time (s)
--------------------  --------
-0.01                 1.12574
-0.03                 0.706858
-0.05                 0.706858
-0.06999999999999999  0.706858
-0.09                 0.602139
-0.11                 0.706858
-0.13                 0.392699
+-------------------  -------
+0.01                 3.22013
+0.03                 3.22013
+0.05                 3.22013
+0.06999999999999999  2.95833
+0.09                 2.69653
+0.11                 2.69653
+0.13                 2.69653
 ...
-9.87                 2.85361
-9.89                 3.37721
-9.91                 3.48193
-9.93                 3.32485
-9.95                 3.63901
-9.97                 3.95317
-9.99                 4.05789
+9.87                 5.52397
+9.89                 5.31453
+9.91                 4.84329
+9.93                 4.94801
+9.95                 5.36689
+9.97                 5.57633
+9.99                 5.78577
 dtype: float64, shape: (500,)</code></pre>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
-<div id="68ba0b9e" class="cell" data-execution_count="7">
+<div id="c9c019f1" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
